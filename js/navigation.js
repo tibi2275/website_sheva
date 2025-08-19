@@ -24,7 +24,6 @@ function initMobileMenu() {
     if (mobileToggle && navMain) {
         // Toggle du menu mobile
         mobileToggle.addEventListener("click", function (e) {
-            e.preventDefault();
             e.stopPropagation();
 
             navMain.classList.toggle("active");
@@ -224,7 +223,7 @@ function initDropdownMenus() {
         // Gestion tactile pour mobile et tablette
         parentLink.addEventListener("click", function (e) {
             if (isTouchDevice || window.innerWidth <= 768) {
-                e.preventDefault();
+                //e.preventDefault();
 
                 const isVisible =
                     dropdown.style.opacity === "1" ||

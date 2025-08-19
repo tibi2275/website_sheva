@@ -365,3 +365,24 @@ window.ShevaUtils = {
     showNotification,
     animateCounter,
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    // Afficher/masquer selon la position
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    });
+
+    // Remonter en haut au clic
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
+});

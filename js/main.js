@@ -71,7 +71,7 @@ function animateCounter(element) {
     const target = parseInt(targetValue);
     const units = originalText.replace(/^\d+/, ""); // Correction ici
 
-    const duration = 2000;
+    const duration = 1000;
     const increment = target / (duration / 16);
     let current = 0;
 

@@ -472,6 +472,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="cta-buttons">
+                            <a
+                                href="#"
+                                class="cta-pricesimulation"
+                                id="openSimulator"
+                            >
+                                Simuler mon tarif
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -690,7 +699,61 @@
             ↑
         </button>
         <!-- JavaScript -->
-        <script src="../js/navigation.js"></script>
+
         <script src="../js/main.js"></script>
+        <script src="../js/navigation.js"></script>
+        <script src="../js/simulator.js"></script>
+
+        <!-- Popup Simulateur -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-container">
+                <div class="popup-header">
+                    <h2 class="popup-title">🐎 Simulateur de Tarif</h2>
+                    <button class="close-btn" id="closeBtn">&times;</button>
+                </div>
+                <div class="popup-content">
+                    <form id="simulatorForm">
+                        <div class="form-group">
+                            <label for="memberCount"
+                                >Nombre de membres de la famille à inscrire
+                                :</label
+                            >
+                            <input
+                                type="number"
+                                id="memberCount"
+                                min="1"
+                                max="10"
+                                value="1"
+                                required
+                                placeholder="Ex: 3"
+                            />
+                            <div class="input-hint">
+                                💡 Réduction famille à partir de 3 membres
+                            </div>
+                        </div>
+
+                        <div class="members-container" id="membersContainer">
+                            <!-- Membres générés dynamiquement -->
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn-primary"
+                            id="calculateBtn"
+                        >
+                            💰 Calculer le tarif
+                        </button>
+
+                        <div class="result-container" id="resultContainer">
+                            <div class="result-price" id="resultPrice"></div>
+                            <div
+                                class="result-details"
+                                id="resultDetails"
+                            ></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

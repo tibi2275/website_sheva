@@ -6,7 +6,7 @@
     right: 30px;
     width: 50px;
     height: 50px;
-    background: #ff6b3556;
+    background: linear-gradient(45deg, #ff6b35d4, #f7921ec6);
     color: white;
     border: none;
     border-radius: 50%;
@@ -1424,6 +1424,24 @@ body {
 }
 
 .cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.cta-pricesimulation {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.cta-pricesimulation:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
@@ -3945,5 +3963,1004 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ===== SIMULATEUR DE TARIFS ===== */
+
+/* Popup Styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+.popup-header {
+    background: linear-gradient(135deg, rgb(94, 180, 174), rgb(69, 144, 150));
+    color: white;
+    padding: 25px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    position: relative;
+}
+
+.popup-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.close-btn:hover {
+    opacity: 0.7;
+}
+
+.popup-content {
+    padding: 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e1e1e1;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: white;
+    position: relative;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #ff6b35;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+    transform: translateY(-1px);
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #ff6b35;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom select styling */
+.form-group select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23667eea" d="m0,1l2,2l2,-2z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px;
+    cursor: pointer;
+    padding-right: 45px;
+}
+
+.form-group select:focus {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%234c63d2" d="m0,1l2,2l2,-2z"/></svg>');
+}
+
+/* Custom number input styling */
+.form-group input[type="number"] {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23667eea" stroke-width="2"><path d="M7 13l3 3 7-7"/><path d="M7 13l3 3 7-7"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 0px;
+    transition: all 0.3s ease, background-size 0.2s ease;
+}
+
+.form-group input[type="number"]:valid {
+    background-size: 16px;
+}
+
+/* Success states */
+.form-group input:valid:not(:placeholder-shown),
+.form-group select:valid {
+    border-color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.02);
+}
+
+.form-group input:valid:not(:placeholder-shown):focus,
+.form-group select:valid:focus {
+    border-color: rgb(94, 180, 174);
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* Error states */
+.form-group input:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #f44336;
+    background-color: rgba(244, 67, 54, 0.02);
+}
+
+.members-container {
+    margin-top: 25px;
+}
+
+.member-card {
+    background: #f8f9fa;
+    border: 2px solid rgb(94, 180, 174);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.member-card:hover {
+    border-color: rgb(94, 180, 174);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.member-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(94, 180, 174);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.member-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, rgb(94, 180, 174), rgb(69, 144, 150));
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgb(69, 144, 150);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.result-container {
+    background: linear-gradient(135deg, rgb(94, 180, 174), rgb(69, 144, 150));
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+    text-align: center;
+    display: none;
+}
+
+.result-price {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result-details {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Input hints */
+.input-hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus ~ .input-hint,
+.form-group select:focus ~ .input-hint,
+.form-group:hover .input-hint {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading state for calculate button */
+.btn-primary.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn-primary.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* ===== STYLES SUPPLÉMENTAIRES SIMULATEUR ===== */
+
+.recommendation-box {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 20%);
+    border: 2px solid #757575;
+    color: #424242;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 600;
+
+    animation: slideIn 0.3s ease;
+}
+
+.level-group,
+.forfait-group {
+    animation: fadeInUp 0.3s ease;
+}
+
+.member-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Animation pour les nouveaux éléments */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour les options recommandées */
+.form-group select option[style*="bold"] {
+    background-color: #e8f5e8;
+}
+
+/* Custom option styling */
+.form-group select option {
+    padding: 12px;
+    font-size: 15px;
+    background: white;
+    color: #333;
+}
+
+.form-group select optgroup {
+    font-weight: 600;
+    color: #667eea;
+    background: #f8f9fa;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+/* ===== STYLES SUPPLÉMENTAIRES SIMULATEUR ===== */
+
+.level-group,
+.forfait-group {
+    animation: fadeInUp 0.3s ease;
+}
+
+.member-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cartes forfaits */
+.forfait-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.forfait-card {
+    background: white;
+    border: 2px solid #e1e1e1;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.forfait-card:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.forfait-card.selected {
+    border-color: #4caf50;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.2);
+}
+
+.forfait-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.forfait-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.forfait-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 8px;
+}
+
+.forfait-description {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Responsive forfait cards */
+@media (max-width: 600px) {
+    .forfait-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .forfait-card {
+        padding: 15px;
+    }
+
+    .forfait-icon {
+        font-size: 24px;
+    }
+
+    .forfait-price {
+        font-size: 20px;
+    }
+}
+
+/* Animation pour les nouveaux éléments */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== STYLES MORPHOLOGIE ET REPRISES (à ajouter à votre style.css) ===== */
+
+/* ===== STYLES MORPHOLOGIE ET REPRISES (à ajouter à votre style.css) ===== */
+
+.morphology-group {
+    animation: fadeInUp 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.mount-type-box {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffecb3 100%);
+    border: 2px solid #ff9800;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 600;
+    color: #e65100;
+    animation: slideIn 0.3s ease;
+}
+
+.mount-type-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Cartes reprises - 3 par ligne */
+.reprise-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.reprise-card {
+    background: white;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reprise-card:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.reprise-card.selected {
+    border-color: #4caf50;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+.reprise-day {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.reprise-time {
+    font-size: 16px;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 4px;
+}
+
+.reprise-instructor {
+    font-size: 11px;
+    color: #666;
+}
+
+.reprise-group {
+    animation: fadeInUp 0.3s ease;
+}
+
+/* ===== STYLES RÉSULTATS DÉTAILLÉS ===== */
+
+.result-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.result-header h3 {
+    color: white;
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+
+.result-header p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-size: 14px;
+}
+
+.members-breakdown {
+    margin-bottom: 20px;
+}
+
+.member-breakdown {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.member-header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.member-info {
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+
+.member-total {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+.breakdown-details {
+    padding: 15px 20px;
+}
+
+.breakdown-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.breakdown-line:last-child {
+    margin-bottom: 0;
+}
+
+.breakdown-label {
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.breakdown-value {
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+}
+
+.forfait-line .breakdown-label {
+    font-weight: 600;
+    color: #ffeb3b;
+}
+
+.forfait-line .breakdown-value {
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+.reprise-line {
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.breakdown-instructor {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+}
+
+.total-section {
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+
+.total-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.total-amount {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive résultats */
+@media (max-width: 600px) {
+    .morphology-group {
+        grid-template-columns: 1fr;
+    }
+
+    .reprise-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .reprise-card {
+        min-height: 80px;
+        padding: 10px;
+    }
+
+    .reprise-day {
+        font-size: 12px;
+    }
+
+    .reprise-time {
+        font-size: 14px;
+    }
+
+    .reprise-instructor {
+        font-size: 10px;
+    }
+
+    .member-header {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .breakdown-details {
+        padding: 12px 15px;
+    }
+
+    .total-line {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .total-amount {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .reprise-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation pour les éléments morphologie */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== STYLES RÉSULTATS DÉTAILLÉS (MANQUANT) ===== */
+
+.result-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.result-header h3 {
+    color: white;
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+
+.result-header p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-size: 14px;
+}
+
+.members-breakdown {
+    margin-bottom: 20px;
+}
+
+.member-breakdown {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.member-header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.member-info {
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+
+.member-total {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+.breakdown-details {
+    padding: 15px 20px;
+}
+
+.breakdown-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.breakdown-line:last-child {
+    margin-bottom: 0;
+}
+
+.breakdown-label {
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.breakdown-value {
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+}
+
+.forfait-line .breakdown-label {
+    font-weight: 600;
+    color: #ffeb3b;
+}
+
+.forfait-line .breakdown-value {
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+.reprise-line {
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.breakdown-instructor {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+}
+
+.total-section {
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+
+.total-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.total-amount {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive résultats */
+@media (max-width: 600px) {
+    .member-header {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .breakdown-details {
+        padding: 12px 15px;
+    }
+
+    .total-line {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .total-amount {
+        font-size: 24px;
+    }
+}
+
+/* ===== STYLES REMISES FAMILLE NOMBREUSE ===== */
+
+.discount-line .breakdown-label {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.discount-line .breakdown-value {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+/* Animation pour les réductions */
+.discount-line {
+    background: rgba(76, 175, 80, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 4px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.discount-line::before {
+    content: "💰";
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .original-price {
+        display: block;
+        font-size: 11px;
     }
 }

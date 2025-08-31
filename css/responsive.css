@@ -83,7 +83,11 @@ body {
         position: absolute;
         top: 100%;
         left: 0;
-        background: rgb(38, 124, 119);
+        background: linear-gradient(
+            135deg,
+            rgb(94, 180, 174) 0%,
+            rgb(69, 144, 150) 100%
+        );
         min-width: 250px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         opacity: 0;
@@ -596,5 +600,43 @@ body {
 
     a {
         text-decoration: underline !important;
+    }
+}
+
+/* ===== SIMULATEUR RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+    .member-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-container {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-header {
+        padding: 20px;
+    }
+
+    .popup-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        padding: 12px 20px;
+        font-size: 16px;
     }
 }

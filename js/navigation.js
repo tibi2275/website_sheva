@@ -573,7 +573,7 @@ function initExternalLinks() {
         if (!link.querySelector(".external-icon")) {
             const icon = document.createElement("span");
             icon.className = "external-icon";
-            icon.innerHTML = "↗";
+
             icon.style.fontSize = "0.8em";
             icon.style.marginLeft = "0.3em";
             icon.setAttribute("aria-hidden", "true");

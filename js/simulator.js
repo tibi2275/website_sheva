@@ -3,149 +3,157 @@
 // Configuration des reprises par niveau (à personnaliser avec vos vraies reprises)
 const reprisesByLevel = {
     debutant: [
-        {
-            id: "deb_mer_14h",
-            day: "Mercredi",
-            time: "14h00",
-            instructor: "Sophie",
-        },
-        { id: "deb_sam_10h", day: "Samedi", time: "10h00", instructor: "Marc" },
-        {
-            id: "deb_sam_16h",
-            day: "Samedi",
-            time: "16h00",
-            instructor: "Julie",
-        },
+        { id: "deb_mer_12h", day: "Mercredi", time: "12h30" },
+        { id: "deb_mer_13h", day: "Mercredi", time: "13h15" },
+        { id: "deb_ven_17h", day: "Vendredi", time: "17h30" },
+        { id: "deb_sam_11h", day: "Samedi", time: "11h30" },
+        { id: "deb_sam_12h", day: "Samedi", time: "12h15" },
     ],
+    debutant_chev: [
+        { id: "debch_mer_18h", day: "Mercredi", time: "18h00" },
+        { id: "debch_jeu_18h", day: "Jeudi", time: "18h30" },
+        { id: "debch_sam_14h", day: "Samedi", time: "14h00" },
+    ],
+
+    baby_rep: [
+        { id: "babyrep_mar_17h", day: "Mardi", time: "17h30" },
+        { id: "babyrep_mer_10h", day: "Mercredi", time: "10h00" },
+        { id: "babyrep_mer_10h30", day: "Mercredi", time: "10h30" },
+        { id: "babyrep_dim_10h", day: "Dimanche", time: "12h00" },
+        { id: "babyrep_dim_10h30", day: "Dimanche", time: "12h30" },
+    ],
+
     bronze: [
         {
-            id: "bronze_mar_17h",
+            id: "bronze_mar_18h",
             day: "Mardi",
-            time: "17h00",
-            instructor: "Sophie",
+            time: "18h00",
         },
         {
-            id: "bronze_mer_16h",
+            id: "bronze_mer_11h",
             day: "Mercredi",
-            time: "16h00",
-            instructor: "Pierre",
+            time: "11h00",
         },
         {
-            id: "bronze_sam_14h",
-            day: "Samedi",
+            id: "bronze_mer_14h",
+            day: "Mercredi",
             time: "14h00",
-            instructor: "Marc",
+        },
+        {
+            id: "bronze_sam_15h",
+            day: "Samedi",
+            time: "15h00",
+        },
+        {
+            id: "bronze_sam_17h",
+            day: "Samedi",
+            time: "17h00",
+        },
+        {
+            id: "bronze_dim_11h",
+            day: "Dimanche",
+            time: "11h00",
         },
     ],
     argent: [
         {
-            id: "argent_mer_18h",
-            day: "Mercredi",
-            time: "18h00",
-            instructor: "Pierre",
+            id: "argent_lun_17h30",
+            day: "Lundi",
+            time: "17h30",
         },
         {
-            id: "argent_ven_17h",
-            day: "Vendredi",
+            id: "argent_mer_17h",
+            day: "Mercredi",
             time: "17h00",
-            instructor: "Sophie",
+        },
+        {
+            id: "argent_sam_9h30",
+            day: "Samedi",
+            time: "9h30",
         },
         {
             id: "argent_sam_16h",
             day: "Samedi",
             time: "16h00",
-            instructor: "Julie",
+        },
+        {
+            id: "argent_dim_10h",
+            day: "Dimanche",
+            time: "10h00",
         },
     ],
     or: [
-        { id: "or_mar_19h", day: "Mardi", time: "19h00", instructor: "Pierre" },
-        { id: "or_jeu_18h", day: "Jeudi", time: "18h00", instructor: "Marc" },
-        {
-            id: "or_sam_18h",
-            day: "Samedi",
-            time: "18h00",
-            instructor: "Sophie",
-        },
+        { id: "or_mer_15h", day: "Mercredi", time: "15h00" },
+        { id: "or_sam_10h30", day: "Samedi", time: "10h30" },
+        { id: "or_sam_14h", day: "Samedi", time: "14h00" },
+        { id: "or_dim_10h00", day: "Dimanche", time: "10h00" },
     ],
     galop1: [
-        {
-            id: "g1_mer_14h",
-            day: "Mercredi",
-            time: "14h30",
-            instructor: "Julie",
-        },
-        { id: "g1_sam_9h", day: "Samedi", time: "09h00", instructor: "Marc" },
-        {
-            id: "g1_dim_10h",
-            day: "Dimanche",
-            time: "10h00",
-            instructor: "Sophie",
-        },
+        { id: "g1_mar_19h", day: "Mardi", time: "19h00" },
+        { id: "g1_mer_16h", day: "Mercredi", time: "16h00" },
+        { id: "g1_jeu_18h30", day: "Jeudi", time: "18h30" },
+        { id: "g1_jeu_20h30", day: "Jeudi", time: "20h30" },
+        { id: "g1_ven_18h30", day: "Vendredi", time: "18h30" },
+        { id: "g1_sam_10h30", day: "Samedi", time: "10h30" },
     ],
     galop2: [
-        { id: "g2_mar_16h", day: "Mardi", time: "16h30", instructor: "Pierre" },
-        {
-            id: "g2_mer_15h",
-            day: "Mercredi",
-            time: "15h30",
-            instructor: "Julie",
-        },
-        { id: "g2_sam_11h", day: "Samedi", time: "11h00", instructor: "Marc" },
+        { id: "g2_lun_19h30", day: "Lundi", time: "19h30" },
+        { id: "g2_lun_20h30", day: "Lundi", time: "20h30" },
+        { id: "g2_mar_19h", day: "Mardi", time: "19h00" },
+        { id: "g2_mer_15h", day: "Mercredi", time: "15h00" },
+        { id: "g2_jeu_20h30", day: "Jeudi", time: "20h30" },
+        { id: "g2_ven_19h30", day: "Vendredi", time: "19h30" },
+        { id: "g2_sam_13h", day: "Samedi", time: "13h00" },
     ],
     galop3: [
-        { id: "g3_mar_17h", day: "Mardi", time: "17h30", instructor: "Sophie" },
-        { id: "g3_jeu_16h", day: "Jeudi", time: "16h30", instructor: "Pierre" },
-        { id: "g3_sam_15h", day: "Samedi", time: "15h00", instructor: "Julie" },
+        { id: "g3_lun_18h30", day: "Lundi", time: "18h30" },
+        { id: "g3_lun_20h30", day: "Lundi", time: "20h30" },
+        { id: "g3_mar_20h", day: "Mardi", time: "20h00" },
+        { id: "g3_mer_19h", day: "Mercredi", time: "19h00" },
+        { id: "g3_jeu_19h30", day: "Jeudi", time: "19h30" },
+        { id: "g3_sam_15h", day: "Samedi", time: "15h00" },
     ],
     galop4: [
-        { id: "g4_lun_18h", day: "Lundi", time: "18h00", instructor: "Marc" },
-        {
-            id: "g4_mer_17h",
-            day: "Mercredi",
-            time: "17h30",
-            instructor: "Pierre",
-        },
-        {
-            id: "g4_sam_13h",
-            day: "Samedi",
-            time: "13h30",
-            instructor: "Sophie",
-        },
+        { id: "g4_lun_12h30", day: "Lundi", time: "12h30" },
+        { id: "g4_lun_18h30", day: "Lundi", time: "18h30" },
+        { id: "g4_mar_18h", day: "Mardi", time: "18h00" },
+        { id: "g4_mar_20h", day: "Mardi", time: "20h00" },
+        { id: "g4_mer_16h", day: "Mercredi", time: "16h00" },
+        { id: "g4_mar_18h", day: "Jeudi", time: "18h30" },
+        { id: "g4_ven_20h30", day: "Vendredi", time: "20h30" },
+        { id: "g4_sam_16h", day: "Samedi", time: "16h00" },
+        { id: "g4_dim_9h", day: "Dimanche", time: "9h00" },
     ],
     galop5: [
-        { id: "g5_mar_18h", day: "Mardi", time: "18h30", instructor: "Pierre" },
-        { id: "g5_jeu_17h", day: "Jeudi", time: "17h30", instructor: "Marc" },
-        {
-            id: "g5_dim_14h",
-            day: "Dimanche",
-            time: "14h00",
-            instructor: "Julie",
-        },
+        { id: "g5_lun_12h30", day: "Lundi", time: "12h30" },
+        { id: "g5_mar_20h", day: "Mardi", time: "20h00" },
+        { id: "g5_mer_17h", day: "Mercredi", time: "17h00" },
+        { id: "g5_jeu_19h30", day: "Jeudi", time: "19h30" },
+        { id: "g5_ven_18h30", day: "Vendredi", time: "18h30" },
+        { id: "g5_sam_9h30", day: "Samedi", time: "9h30" },
+        { id: "g5_dim_9h", day: "Dimanche", time: "9h00" },
     ],
     galop6: [
-        { id: "g6_lun_19h", day: "Lundi", time: "19h00", instructor: "Sophie" },
-        {
-            id: "g6_mer_19h",
-            day: "Mercredi",
-            time: "19h00",
-            instructor: "Pierre",
-        },
-        { id: "g6_sam_17h", day: "Samedi", time: "17h00", instructor: "Marc" },
+        { id: "g6_lun_19h", day: "Lundi", time: "19h30" },
+
+        { id: "g6_mar_12h", day: "Mardi", time: "12h30" },
+        { id: "g6_mer_19h", day: "Mercredi", time: "19h30" },
     ],
-    galop7: [
-        { id: "g7_mar_20h", day: "Mardi", time: "20h00", instructor: "Pierre" },
-        {
-            id: "g7_mer_19h30",
-            day: "Mercredi",
-            time: "19h30",
-            instructor: "Marc",
-        },
-        {
-            id: "g7_sam_11h30",
-            day: "Samedi",
-            time: "11h30",
-            instructor: "Sophie",
-        },
+    galop7: [{ id: "g7_mar_12h", day: "Mardi", time: "12h30" }],
+    perf_1h30g6: [
+        { id: "perf_lun_20h", day: "Lundi", time: "20h30" },
+
+        { id: "perf_ven_20h30", day: "Vendredi", time: "20h30" },
+
+        { id: "perf_sam_17h", day: "Samedi", time: "17h00" },
+    ],
+    perf_1h30g7: [
+        { id: "perf_lun_20h", day: "Lundi", time: "20h30" },
+
+        { id: "perf_mer_20h", day: "Mercredi", time: "20h30" },
+        { id: "perf_jeu_20h30", day: "Jeudi", time: "20h30" },
+
+        { id: "perf_sam_11h30", day: "Samedi", time: "11h30" },
     ],
 };
 
@@ -153,37 +161,37 @@ const reprisesByLevel = {
 const forfaitsPricing = {
     baby: {
         name: "Baby",
-        price: 180,
+        price: 531,
         description: "Parfait pour débuter en douceur",
         icon: "🍼",
     },
     poney_debutant: {
         name: "Poney Débutant",
-        price: 220,
+        price: 664,
         description: "Apprentissage des bases avec les poneys",
         icon: "🐴",
     },
     poney: {
         name: "Poney",
-        price: 280,
+        price: 886,
         description: "Perfectionnement avec les poneys",
         icon: "🏇",
     },
     cheval_under16: {
         name: "Cheval <16 ans",
-        price: 320,
+        price: 996,
         description: "Équitation avec les chevaux pour les jeunes",
         icon: "🐎",
     },
     cheval_over16: {
         name: "Cheval >16 ans",
-        price: 380,
+        price: 1071,
         description: "Équitation avec les chevaux pour les adultes",
         icon: "🏆",
     },
     perfectionnement: {
         name: "Perfectionnement 1h30",
-        price: 450,
+        price: 1200,
         description: "Cours de perfectionnement de 1h30",
         icon: "⭐",
     },
@@ -307,12 +315,12 @@ function initSimulator() {
         ) {
             if (age < 16) {
                 availableForfaits = ["cheval_under16"];
-                if (level === "galop7") {
+                if (level === "galop7" || level === "galop6") {
                     availableForfaits.push("perfectionnement");
                 }
             } else {
                 availableForfaits = ["cheval_over16"];
-                if (level === "galop7") {
+                if (level === "galop7" || level === "galop6") {
                     availableForfaits.push("perfectionnement");
                 }
             }
@@ -645,13 +653,8 @@ function initSimulator() {
                 forfaitInput.value = forfaitKey;
 
                 // Afficher les reprises après sélection du forfait
-                const currentLevel =
-                    document.getElementById(`level${memberIndex}`).value ||
-                    "debutant";
-                console.log(
-                    `Forfait selected, showing reprises for level: ${currentLevel}`
-                );
-                updateRepriseOptions(memberIndex, currentLevel);
+                // Afficher les reprises après sélection du forfait
+                updateRepriseOptionsBasedOnForfait(memberIndex, forfaitKey);
             });
 
             forfaitCards.appendChild(card);
@@ -660,7 +663,7 @@ function initSimulator() {
         forfaitGroup.style.display = "block";
     }
 
-    function updateRepriseOptions(memberIndex, level) {
+    function updateRepriseOptionsBasedOnForfait(memberIndex, forfaitKey) {
         const repriseCards = document.getElementById(
             `repriseCards${memberIndex}`
         );
@@ -668,39 +671,63 @@ function initSimulator() {
             `repriseGroup${memberIndex}`
         );
         const repriseInput = document.getElementById(`reprise${memberIndex}`);
+        const currentLevel = document.getElementById(
+            `level${memberIndex}`
+        ).value;
 
-        console.log(`Looking for reprises for level: ${level}`);
-        console.log("Available levels:", Object.keys(reprisesByLevel));
+        console.log(`Forfait selected: ${forfaitKey}, Level: ${currentLevel}`);
 
-        if (!reprisesByLevel[level]) {
-            console.log(`No reprises found for level: ${level}`);
+        let repriseKey = null;
+
+        // LOGIQUE D'AFFICHAGE DES REPRISES - TU PEUX MODIFIER ICI
+        if (forfaitKey === "baby") {
+            repriseKey = "baby_rep";
+        } else if (forfaitKey === "poney_debutant") {
+            repriseKey = "debutant";
+        } else if (forfaitKey === "poney") {
+            repriseKey = currentLevel; // bronze, argent, or
+        } else if (
+            forfaitKey === "cheval_under16" ||
+            forfaitKey === "cheval_over16"
+        ) {
+            if (currentLevel === "debutant") {
+                repriseKey = "debutant_chev";
+            } else {
+                repriseKey = currentLevel; // galop1, galop2, etc.
+            }
+        } else if (
+            forfaitKey === "perfectionnement" ||
+            currentLevel === "galop6"
+        ) {
+            repriseKey = "perf_1h30g6";
+        } else if (
+            forfaitKey === "perfectionnement" ||
+            currentLevel === "galop7"
+        ) {
+            repriseKey = "perf_1h30g7";
+        }
+
+        console.log(`Using reprise key: ${repriseKey}`);
+
+        if (!repriseKey || !reprisesByLevel[repriseKey]) {
+            console.log(`No reprises found for key: ${repriseKey}`);
             repriseGroup.style.display = "none";
             return;
         }
 
-        const availableReprises = reprisesByLevel[level];
+        const availableReprises = reprisesByLevel[repriseKey];
         repriseInput.value = "";
         repriseCards.innerHTML = "";
-
-        console.log(
-            `Found ${availableReprises.length} reprises for level ${level}`
-        );
 
         availableReprises.forEach(function (reprise, index) {
             const card = document.createElement("div");
             card.className = "reprise-card";
             card.dataset.reprise = reprise.id;
 
-            if (index === 0) {
-                card.classList.add("recommended");
-            }
-
             card.innerHTML = `
-                <div class="reprise-day">${reprise.day}</div>
-                <div class="reprise-time">${reprise.time}</div>
-                <div class="reprise-instructor">👨‍🏫 ${reprise.instructor}</div>
-                
-            `;
+            <div class="reprise-day">${reprise.day}</div>
+            <div class="reprise-time">${reprise.time}</div>
+        `;
 
             card.addEventListener("click", function () {
                 repriseCards
@@ -710,14 +737,12 @@ function initSimulator() {
                     });
                 this.classList.add("selected");
                 repriseInput.value = reprise.id;
-                console.log(`Selected reprise: ${reprise.id}`);
             });
 
             repriseCards.appendChild(card);
         });
 
         repriseGroup.style.display = "block";
-        console.log("Reprise group should now be visible");
     }
 
     function handleFormSubmit(e) {
@@ -919,7 +944,7 @@ function initSimulator() {
                                             ? `
                                     <div class="breakdown-line reprise-line">
                                         <span class="breakdown-label">🕐 ${member.reprise.day} ${member.reprise.time}</span>
-                                        <span class="breakdown-instructor">avec ${member.reprise.instructor}</span>
+                                        
                                     </div>
                                     `
                                             : ""

@@ -193,6 +193,9 @@
                             <a href="../PDF_docs/Statuts_SHEVA_2023.pdf" class="cta-primary">Voir les Statuts</a>
                             <a href="../pages/centre.html#board" class="cta-primary">Voir les membres</a>
                             <a href="mailto:ca@sheva.fr" class="cta-primary">Contacter le Conseil d'Administration</a>
+                            <!--<button id="downloadBtn" class="cta-primary">
+                                CR des Assemblées Générales
+                            </button> -->
                         </div>        
                         
                         
@@ -305,6 +308,21 @@
                             </div>
                             <p>Un espace pour accueillir au mieux les cavaliers et les accompagnateur est en cours d'amménagement. La terrasse et la tribune sont fonctionnelles et vous permettent de s'installer paisiblement pendant les cours</p>
                             <p>Une offre de restauration et snacking sera bientôt proposée pour rendre les moments encore plus conviviaux.</p>
+                        </div>
+                    </div>
+                    <div class="installation-card">
+                        <div class="installation-image">
+                            <img src="../images/ecuries-illustration.avif" alt="Propriétaires">
+                        </div>
+                        <div class="installation-content">
+                            <h3>Accueil Propriétaires</h3>
+                            <div class="installation-specs">
+                                <span class="spec">10 boxes chevaux</span>
+                                
+                                <span class="spec">Accès installations</span>
+                            </div>
+                            <p> La Sheva accueil les chevaux de propriétaires. 10 boces spacieux sont disponibles. Les propriétaires ont accès aux installations : paddocks en sable et en herbe, carrière,...</p>
+                            <p>Contactez nous pour plus d'information sur les conditions d'accueil et nos services. <a href="../pages/infos.html">Contact</a></p>
                         </div>
                     </div>
                 </div>
@@ -758,7 +776,28 @@
     <!-- JavaScript -->
     <script src="../js/navigation.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/download-popup.js"></script>
+    
     <!-- Quick Nav Sticky Script -->
     
+    <div class="popup-overlay" id="downloadPopup">
+        <div class="popup-container">
+            <div class="popup-header">
+                <h2 class="popup-title">🐎 Documents</h2>
+                <button class="close-btn" id="closePopup">&times;</button>
+            </div>
+                
+            
+            <div class="popup-content">
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="/documents/guide.pdf" download class="cta-primary">Guide utilisateur</a>
+                    <a href="/documents/cgv.pdf" download class="cta-primary">Conditions générales</a>
+                    <a href="/documents/catalogue.pdf" download class="cta-primary">Catalogue produits</a>
+                    <a href="/documents/images.zip" download class="cta-primary">Images produits</a>
+                </div>
+            </div>
+
+        </div>
+    </div>  
 </body>
 </html>

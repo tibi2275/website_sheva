@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Le Centre Équestre SHEVA - Histoire, Installations & Équipe
+        </title>
+        <meta
+            name="description"
+            content="Découvrez l'histoire de SHEVA, nos installations modernes et notre équipe passionnée. Association loi 1901 au cœur du Val-de-Marne depuis plus de 30 ans."
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/responsive.css" />
+        <style>
+            /* ===== CSS PRINCIPAL SHEVA ===== */
+
+            /* Reset & Base */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: #f8f9fa;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 2rem;
+            }
+
+            /* ===== HEADER CGV ===== */
+            .cgv-header {
+                background: linear-gradient(
+                    135deg,
+                    rgb(94, 180, 174),
+                    rgb(69, 144, 150)
+                );
+                color: white;
+                padding: 3rem 0;
+                text-align: center;
+            }
+
+            .cgv-title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            .cgv-subtitle {
+                font-size: 1.2rem;
+                opacity: 0.9;
+            }
+
+            .cgv-version {
+                font-size: 1rem;
+                margin-top: 1rem;
+                opacity: 0.8;
+            }
+
+            /* ===== CONTENT CGV ===== */
+            .cgv-content {
+                background: white;
+                margin: 2rem auto;
+                padding: 3rem;
+                border-radius: 15px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                max-width: 1000px;
+            }
+
+            /* Breadcrumb */
+            .breadcrumb-section {
+                background: #f8f9fa;
+                padding: 1rem 0;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .breadcrumb {
+                font-size: 0.9rem;
+            }
+
+            .breadcrumb a {
+                color: rgb(94, 180, 174);
+                text-decoration: none;
+            }
+
+            .breadcrumb a:hover {
+                text-decoration: underline;
+            }
+
+            .breadcrumb .separator {
+                margin: 0 0.5rem;
+                color: #666;
+            }
+
+            .breadcrumb .current {
+                color: #666;
+            }
+
+            /* Typography */
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: rgb(94, 180, 174);
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                margin-top: 2.5rem;
+                margin-bottom: 1.5rem;
+                border-bottom: 2px solid #e9ecef;
+                padding-bottom: 0.5rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                margin-top: 1.5rem;
+                margin-bottom: 0.8rem;
+            }
+
+            p {
+                margin-bottom: 1rem;
+                line-height: 1.7;
+                text-align: justify;
+            }
+
+            /* Lists */
+            ul,
+            ol {
+                margin-bottom: 1rem;
+                padding-left: 2rem;
+            }
+
+            li {
+                margin-bottom: 0.5rem;
+                line-height: 1.6;
+            }
+
+            /* Special elements */
+            .preambule {
+                background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                padding: 2rem;
+                border-radius: 12px;
+                margin-bottom: 2rem;
+                border-left: 4px solid rgb(94, 180, 174);
+            }
+
+            .article {
+                margin-bottom: 2.5rem;
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid #e9ecef;
+            }
+
+            .article:last-child {
+                border-bottom: none;
+            }
+
+            .article-title {
+                background: rgb(94, 180, 174);
+                color: white;
+                padding: 0.8rem 1.5rem;
+                border-radius: 8px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+                display: inline-block;
+            }
+
+            .sub-article {
+                margin-top: 2rem;
+                padding-left: 1rem;
+                border-left: 3px solid #e9ecef;
+            }
+
+            .sub-article-title {
+                background: #f8f9fa;
+                color: rgb(94, 180, 174);
+                padding: 0.6rem 1rem;
+                border-radius: 6px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                display: inline-block;
+            }
+
+            /* Emphasis */
+            .highlight {
+                color: rgb(94, 180, 174);
+                font-weight: 600;
+            }
+
+            strong {
+                color: #333;
+                font-weight: 600;
+            }
+
+            /* Application section */
+            .application-section {
+                background: linear-gradient(
+                    135deg,
+                    rgb(94, 180, 174),
+                    rgb(69, 144, 150)
+                );
+                color: white;
+                padding: 2.5rem;
+                border-radius: 15px;
+                margin-top: 3rem;
+            }
+
+            .application-section h2 {
+                color: white;
+                text-align: center;
+                margin-bottom: 2rem;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+                padding-bottom: 1rem;
+            }
+
+            .application-section p {
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+
+            .signature-section {
+                background: white;
+                padding: 2rem;
+                border-radius: 12px;
+                margin-top: 2rem;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+
+            .signature-section h3 {
+                color: rgb(94, 180, 174);
+                margin-bottom: 1.5rem;
+            }
+
+            .form-fields {
+                display: grid;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .form-field {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .form-field label {
+                color: rgb(94, 180, 174);
+                font-weight: 500;
+                min-width: 200px;
+            }
+
+            .form-field input {
+                flex: 1;
+                padding: 0.5rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            /* Contact info */
+            .contact-info {
+                background: #f8f9fa;
+                padding: 1.5rem;
+                border-radius: 8px;
+                margin: 1.5rem 0;
+                border-left: 4px solid #ff6b35;
+            }
+
+            /* Footer */
+            .cgv-footer {
+                text-align: center;
+                padding: 2rem;
+                color: #666;
+                font-size: 0.9rem;
+                margin-top: 3rem;
+                border-top: 1px solid #e9ecef;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 0 1rem;
+                }
+
+                .cgv-content {
+                    padding: 2rem 1.5rem;
+                    margin: 1rem;
+                }
+
+                .cgv-title {
+                    font-size: 2rem;
+                }
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                .form-field {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .form-field label {
+                    min-width: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <!-- Logo principal cliquable -->
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img
+                                src="../images/logo-sheva.jpg"
+                                alt="Logo SHEVA"
+                                class="logo-image colored-background"
+                            />
+                        </a>
+                    </div>
+
+                    <!-- Image secondaire -->
+                    <a href="../index.html"
+                        ><img
+                            src="../images/logo-sheva2.jpeg"
+                            alt="Image secondaire"
+                            class="secondary-image colored-background"
+                        />
+                    </a>
+                </div>
+
+                <nav class="nav-main" id="navMain">
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li class="dropdown-parent">
+                            <a href="../pages/centre.html"
+                                >Le centre équestre</a
+                            >
+                            <div class="dropdown">
+                                <a href="../pages/centre.html#histoire"
+                                    >Notre Histoire</a
+                                >
+                                <a href="../pages/centre.html#association"
+                                    >L'Association</a
+                                >
+                                <a href="../pages/centre.html#installations"
+                                    >Les installations</a
+                                >
+                                <a href="../pages/centre.html#equipe"
+                                    >L'équipe</a
+                                >
+                            </div>
+                        </li>
+                        <li class="dropdown-parent">
+                            <a href="../pages/activites.html">Les activités</a>
+                            <div class="dropdown">
+                                <a href="../pages/activites.html#cours"
+                                    >Nos Cours</a
+                                >
+                                <a href="../pages/activites.html#competition"
+                                    >Competition</a
+                                >
+                                <a href="../pages/activites.html#galops"
+                                    >Examens et Galops</a
+                                >
+                                <a href="../pages/activites.html#activites"
+                                    >Activités</a
+                                >
+                            </div>
+                        </li>
+                        <li class="dropdown-parent">
+                            <a href="../pages/chevaux.html">Chevaux & poneys</a>
+                            <div class="dropdown">
+                                <a href="../pages/chevaux.html#chevaux-detail"
+                                    >Chevaux</a
+                                >
+                                <a href="../pages/chevaux.html#poneys"
+                                    >Poneys</a
+                                >
+                                <a href="../pages/chevaux.html#bien-etre"
+                                    >Bien-être</a
+                                >
+                                <a href="../pages/chevaux.html#apres-sheva"
+                                    >L'Après SHEVA</a
+                                >
+                            </div>
+                        </li>
+                        <li class="dropdown-parent">
+                            <a href="../pages/planning.html"
+                                >Planning & tarifs</a
+                            >
+                            <div class="dropdown">
+                                <a href="../pages/planning.html#planning"
+                                    >Planning des Cours</a
+                                >
+                                <a href="../pages/planning.html#tarifs"
+                                    >Nos Tarifs</a
+                                >
+                                <a href="../pages/planning.html#annulation"
+                                    >Assurance et Annulations</a
+                                >
+                            </div>
+                        </li>
+                        <li class="dropdown-parent">
+                            <a href="../pages/infos.html" class="active"
+                                >Infos pratiques</a
+                            >
+                            <div class="dropdown">
+                                <a href="../pages/infos.html#contact"
+                                    >Contact & Accès</a
+                                >
+                                <a href="../pages/infos.html#fonctionnement"
+                                    >Fonctionnement</a
+                                >
+                                <a href="../pages/infos.html#materiel"
+                                    >Matériel</a
+                                >
+                                <a href="../pages/infos.html#inscriptions"
+                                    >Inscriptions</a
+                                >
+                                <a href="../pages/infos.html#espace-personnel"
+                                    >Espace Personnel</a
+                                >
+                                <a href="../pages/infos.html#faq">FAQ</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a
+                        href="https://cloud6.kavalog.fr/SHEVA/"
+                        class="btn-account"
+                        >Mon compte</a
+                    >
+                </nav>
+                <button class="mobile-toggle" id="mobileToggle">☰</button>
+            </div>
+        </header>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Conditions Générales de Vente</h1>
+            </div>
+        </section>
+        <!-- Content -->
+        <div class="cgv-content">
+            <!-- Préambule -->
+            <div class="preambule">
+                <h2>Préambule</h2>
+                <p>
+                    Entre le Pôle équestre SHEVA, ci-après nommé «
+                    <strong>SHEVA</strong> », actuellement sis Chemin des Bœufs,
+                    Parc Interdépartemental des Sports, 94000 CRÉTEIL,
+                    association régie par la loi du 1<sup>er</sup> juillet 1901,
+                    immatriculée sous le numéro SIREN 785 735 069 et numéro de
+                    TVA intracommunautaire FR71785735069, et club équestre
+                    affilié à la Fédération Française d'Équitation sous le
+                    numéro 9400000, représentée par M<sup>me</sup> Anne
+                    BOISSON-SCHALLER en qualité de Présidente, dûment habilitée
+                    aux fins des présentes,
+                </p>
+                <p>
+                    Et la personne physique procédant à l'achat, ci-après le «
+                    <strong>Client</strong> », pour son propre compte en tant
+                    que bénéficiaire ou pour le compte d'un tiers bénéficiaire,
+                    le bénéficiaire effectif étant désigné ci-après en tant que
+                    « <strong>Adhérent</strong> ».
+                </p>
+            </div>
+
+            <!-- Article 1 -->
+            <div class="article">
+                <div class="article-title">Article 1 - Objet</div>
+                <p>
+                    La SHEVA est une Association loi 1901, qui anime
+                    l'établissement «
+                    <span class="highlight"
+                        >Pôle équestre Paris Val-de-Marne</span
+                    >
+                    » au sein du Parc Interdépartemental des Sports (Créteil /
+                    Choisy-le Roi).
+                </p>
+                <p>
+                    Les présentes Conditions Générales de Vente, ci-après
+                    nommées « <strong>CGV</strong> », déterminent les droits et
+                    obligations entre la SHEVA et le Client dans le cadre de la
+                    vente, en ligne ou sur place au Pôle équestre, des
+                    cotisations, licences, forfaits, cartes, pensions d'équidés,
+                    stages, animations, ou toute autre prestation relative à des
+                    activités équestres.
+                </p>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 2 - Dispositions générales
+                </div>
+                <p>
+                    La SHEVA se réserve la possibilité de modifier les présentes
+                    CGV à tout moment par la publication d'une nouvelle version
+                    sur son site Internet. Les CGV applicables alors sont celles
+                    en vigueur à la date du paiement (ou du premier paiement en
+                    cas de paiements multiples) de la commande.
+                </p>
+                <p>
+                    Le Client déclare avoir pris connaissance de l'ensemble des
+                    présentes CGV, et le cas échéant des Conditions
+                    Particulières de Vente liées à un produit ou à un service en
+                    particulier, et les accepter sans restriction ni réserve,
+                    soit par la signature d'une version papier, soit par la
+                    validation d'une case à cocher avec possibilité de
+                    télécharger les CGV applicables à l'achat, avant toute
+                    confirmation de ce dernier s'il est effectué en ligne.
+                </p>
+                <p>
+                    Le Client reconnaît qu'il a bénéficié des conseils et
+                    informations nécessaires afin de s'assurer de l'adéquation
+                    de l'offre à ses besoins. Le Client déclare être en mesure
+                    de contracter légalement en vertu des lois françaises ou
+                    valablement représenter la personne physique ou morale pour
+                    laquelle il s'engage. Sauf preuve contraire, les
+                    informations enregistrées par la SHEVA constituent la preuve
+                    de l'ensemble des transactions.
+                </p>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="article">
+                <div class="article-title">Article 3 - Tarifs</div>
+                <p>
+                    Les prix des cotisations et prestations sont indiqués en
+                    Euros TTC et réputés nets, hors frais de port s'il y a lieu,
+                    sur la base des taux de TVA appliqués selon la
+                    réglementation en vigueur, sujets à variations. Tout
+                    changement de taux de TVA pourra être répercuté sur les
+                    prix, et ce uniquement avant validation de toute nouvelle
+                    commande.
+                    <span class="highlight"
+                        >Les cotisations et prestations sont payables
+                        d'avance.</span
+                    >
+                </p>
+                <p>
+                    Les tarifs sont indiqués sur les descriptifs des prestations
+                    prévus à cet effet, dès leur proposition par la SHEVA et au
+                    plus tard au moment de la commande, avant validation de
+                    l'achat et règlement. Ils sont affichés dans l'établissement
+                    et disponibles sur le site Internet de la SHEVA
+                    (www.sheva.fr).
+                </p>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 4 - Localisation des prestations
+                </div>
+                <p>
+                    Les prestations sont dispensées dans les locaux de la SHEVA,
+                    situés au sein du Parc Interdépartemental des Sports Paris
+                    Val-de-Marne (Créteil / Choisy-le Roi). Certaines
+                    prestations peuvent être réalisées en dehors des locaux de
+                    la SHEVA : l'information de leur localisation est
+                    généralement portée à la connaissance du Client au moment de
+                    la réservation et obligatoirement avant validation de
+                    l'achat.
+                </p>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 5 - Inscription des Adhérents
+                </div>
+                <p>L'inscription à la SHEVA comprend :</p>
+                <ul>
+                    <li>
+                        une cotisation au titre de l'adhésion à l'Association ;
+                    </li>
+                    <li>
+                        la licence de la Fédération Française d'Équitation ;
+                    </li>
+                    <li>
+                        une ou plusieurs des prestations suivantes : forfait(s)
+                        annuel(s) ou semestriel(s), heures d'équitation à la
+                        carte, stages et animations, mise en pension d'équidés,
+                        ou toute autre prestation relative à des activités
+                        équestres.
+                    </li>
+                </ul>
+                <p>
+                    <strong
+                        >Aucune adhésion, licence ou prestation ne peut être
+                        cédée ou échangée</strong
+                    >
+                    avec un membre d'une même famille ou avec un tiers, qu'il
+                    soit Adhérent ou non. Toute inscription concernant un enfant
+                    mineur devra être effectuée par ses parents ou son
+                    responsable légal. L'inscription ne sera effective qu'une
+                    fois le règlement correspondant effectué.
+                </p>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="article">
+                <div class="article-title">Article 6 - Cotisation</div>
+                <p>
+                    L'adhésion à la SHEVA est individuelle, nominative et
+                    obligatoire, et impose de ce fait le paiement d'une
+                    cotisation. L'adhésion fait de son bénéficiaire un membre
+                    actif de l'association SHEVA, lui permet de bénéficier des
+                    prestations du club, et lui confère un droit de vote lors
+                    des Assemblées Générales, conformément aux statuts en
+                    vigueur.
+                </p>
+                <p>
+                    <span class="highlight"
+                        >La cotisation est valable du 1<sup>er</sup> août au 31
+                        juillet de l'année suivante.</span
+                    >
+                    Son montant est dû en totalité quelle que soit la date
+                    d'inscription et il n'est pas remboursable.
+                </p>
+                <p>
+                    Lorsqu'une personne demande à adhérer à la SHEVA, elle peut
+                    être admise par le Directeur à titre provisoire. Son
+                    admission devient définitive après validation par le Conseil
+                    d'Administration. À défaut de réponse dans les quinze (15)
+                    jours suivant le dépôt du bulletin d'adhésion, la demande
+                    est réputée avoir été acceptée, sous réserve du règlement de
+                    la cotisation.
+                </p>
+                <p>
+                    Aucun Adhérent ne peut participer aux activités du Pôle
+                    équestre s'il n'a pas acquitté sa cotisation, à l'exclusion
+                    des activités de découverte de l'équitation (« éveil poney »
+                    pour les jeunes de 3-4 ans) et des séances d'essai pour les
+                    nouveaux cavaliers (Article 8.4).
+                </p>
+            </div>
+
+            <!-- Article 7 -->
+            <div class="article">
+                <div class="article-title">Article 7 - Licence fédérale</div>
+                <p>
+                    La licence de la Fédération Française d'Équitation (FFE) est
+                    <span class="highlight"
+                        >individuelle, nominative et obligatoire</span
+                    >
+                    pour la pratique de l'équitation. Lors de son inscription,
+                    l'Adhérent doit présenter une licence fédérale valable, ou
+                    bien en faire l'acquisition auprès de la SHEVA. En cas de
+                    non-présentation, le Client se verra refuser le bénéfice de
+                    la prestation qu'il aura achetée, sans prétendre à aucun
+                    remboursement ou aucune récupération ultérieure.
+                </p>
+                <p>
+                    La licence fédérale permet d'être assuré dans tous les
+                    centres équestres affiliés de France, de passer les examens
+                    fédéraux, de les valider, et de participer à une dynamique
+                    sportive. Elle comprend une assurance responsabilité civile
+                    et des garanties de base pour l'assurance individuelle
+                    accidents (voir détails sur www.ffe.com ou sur le document
+                    de licence, ainsi que l'Article 14 « Assurances » des
+                    présentes CGV).
+                </p>
+                <p>
+                    <span class="highlight"
+                        >La licence fédérale est valable du 1<sup>er</sup>
+                        septembre au 31 décembre de l'année suivante.</span
+                    >
+                    Son montant est dû intégralement et il n'est pas
+                    remboursable.
+                </p>
+            </div>
+
+            <!-- Article 8 -->
+            <div class="article">
+                <div class="article-title">Article 8 - Prestations</div>
+
+                <!-- Article 8.1 -->
+                <div class="sub-article">
+                    <div class="sub-article-title">Article 8.1 - Forfaits</div>
+                    <p>
+                        Toute inscription à un forfait est individuelle et
+                        nominative. Elle est souscrite pour la durée choisie
+                        lors de l'achat. Un forfait comprend 1 séance par
+                        semaine à heure et jour fixes arrêtés le jour de
+                        l'inscription. Tout changement d'horaire doit être
+                        validé par un enseignant.
+                    </p>
+                    <p>
+                        La SHEVA dégage toute responsabilité dans le cas où un
+                        Adhérent s'étant inscrit en ligne, sans avoir eu son
+                        niveau d'équitation validé au préalable par un
+                        enseignant du Pôle équestre, se trouverait dans une
+                        reprise d'un niveau non adapté : il pourra se voir
+                        refuser l'accès à cette reprise, sans compensation
+                        financière. Dans la mesure des places disponibles, un
+                        autre horaire correspondant à son niveau pourra lui être
+                        proposé.
+                    </p>
+                    <p>
+                        <span class="highlight"
+                            >Le forfait annuel comprend 39 séances en période
+                            scolaire</span
+                        >
+                        (y compris les vacances de la Toussaint). Pendant les
+                        vacances scolaires de Noël, d'Hiver et de Printemps,
+                        pour tous les forfaits à l'exception des forfaits « Baby
+                        » et « Débutant poney », chaque Adhérent a la
+                        possibilité de pratiquer 1 heure par semaine sans
+                        surcoût, selon un planning de reprises spécifique
+                        communiqué environ deux semaines avant chaque début de
+                        période de vacances scolaires.
+                    </p>
+                    <p>
+                        Un système d'inscription en ligne est mis en place
+                        permettant de réserver des séances grâce à des « bons
+                        vacances », à raison de 1 par semaine et par forfait.
+                        Ces bons d'inscription ne sont pas utilisables en dehors
+                        des vacances scolaires.
+                    </p>
+                    <p>
+                        Les forfaits semestriels comprennent chacun un nombre de
+                        séances variable selon les années et les dates de
+                        vacances scolaires (les deux semestres cumulés d'une
+                        même saison annuelle totalisent 39 séances en période
+                        scolaire). Les dates de début et fin des forfaits
+                        annuels et semestriels sont précisées et mises à jour
+                        chaque année sur les fiches de planning et de tarifs
+                        dédiées, et sur le site Internet de la SHEVA.
+                    </p>
+                    <p>
+                        Un forfait se déroule par alternance de disciplines sur
+                        un cycle de 4 semaines en période scolaire : mise en
+                        selle assise, dressage, mise en selle obstacle, et saut
+                        d'obstacles, à l'exception des reprises labellisées «
+                        Dressage », lesquelles restent sur une alternance de
+                        mise en selle assise et dressage, et des reprises de
+                        niveau « Galop 0 », « Débutant poney » et « Baby », qui
+                        consistent en des activités d'initiation (pas de saut
+                        d'obstacles).
+                    </p>
+                    <p>
+                        Une reprise regroupe 10 ou 11 cavaliers maximum (selon
+                        les niveaux et l'aire d'évolution). Les reprises «
+                        Débutant poney » sont limitées à 8 cavaliers et les
+                        reprises « Baby » à 6 cavaliers.
+                    </p>
+                    <p>La durée d'une reprise est d'environ :</p>
+                    <ul>
+                        <li>1 heure, pour les forfaits de base ;</li>
+                        <li>
+                            1 heure et 1 heure 30 par alternance 1 semaine sur
+                            2, pour les forfaits dédiés à certaines reprises de
+                            niveau Galop 6 et 7 ;
+                        </li>
+                        <li>
+                            45 minutes, pour les forfaits labellisés « Débutant
+                            poney » ;
+                        </li>
+                        <li>
+                            30 minutes, pour les forfaits labellisés « Baby ».
+                        </li>
+                    </ul>
+                    <p>
+                        Lors des jours fériés, les horaires de reprise sont
+                        susceptibles d'être modifiés. En cas de nombre
+                        d'inscrits très faible sur plusieurs reprises de niveaux
+                        équivalents, celles-ci pourront être regroupées. Les
+                        Adhérents concernés en seront avertis dès que possible
+                        et au plus tard 48 heures avant la reprise déplacée.
+                    </p>
+                    <p>
+                        De manière exceptionnelle, la SHEVA se réserve le droit
+                        d'annuler une reprise (par ex. pour l'organisation de
+                        concours ou d'animations spéciales, ou pour un motif
+                        indépendant de sa volonté). Les Adhérents concernés en
+                        seront avertis dès que possible et au plus tard 48
+                        heures avant la reprise annulée, et la reprise sera
+                        reportée ou des rattrapages exceptionnels seront
+                        proposés.
+                    </p>
+                    <p>
+                        Dans le cas où la SHEVA ne pourrait proposer une monture
+                        et/ou un enseignement adapté à un Adhérent, que ce soit
+                        avant le début de la saison ou au cours de celle-ci,
+                        l'annulation totale ou partielle de l'inscription au
+                        forfait sera prononcée par le Conseil d'Administration.
+                        Cette annulation sera assortie du remboursement intégral
+                        des reprises annulées, et ce dernier sera effectué dans
+                        les 30 jours suivant la décision d'annulation par tout
+                        moyen.
+                    </p>
+                </div>
+
+                <!-- Article 8.2 -->
+                <div class="sub-article">
+                    <div class="sub-article-title">Article 8.2 - Cartes</div>
+                    <p>
+                        Le Client a la possibilité d'acheter des reprises
+                        isolées, indépendamment ou en complément des reprises
+                        comprises dans les forfaits, sous forme de cartes.
+                    </p>
+                    <p>
+                        Une carte donne accès à l'Adhérent à 1 séance,
+                        correspondant à 1 reprise.
+                        <span class="highlight"
+                            >Elle est valable deux mois après son achat ou
+                            jusqu'à la fin de la saison équestre</span
+                        >, selon la date la plus précoce. Elle n'est pas
+                        remboursable.
+                    </p>
+                    <p>
+                        L'inscription à une reprise isolée doit être réalisée en
+                        ligne, avant 20 h la veille. Toute annulation doit être
+                        signalée au plus tard 24 heures à l'avance, en procédant
+                        à la désinscription de l'Adhérent sur le compte en ligne
+                        du Client. Passé ce délai, l'heure utilisée sur la carte
+                        est définitivement perdue.
+                    </p>
+                </div>
+
+                <!-- Article 8.3 -->
+                <div class="sub-article">
+                    <div class="sub-article-title">
+                        Article 8.3 - Animations, stages et examens fédéraux
+                    </div>
+                    <p>
+                        Des stages et animations sont proposés tout au long de
+                        l'année, ainsi que des sessions d'examens en fin
+                        d'année. La réservation et l'inscription définitive ne
+                        seront effectives qu'une fois le règlement correspondant
+                        effectué.
+                    </p>
+                    <p>
+                        <span class="highlight"
+                            >Toute inscription non décommandée 48 heures à
+                            l'avance est considérée comme ferme</span
+                        >
+                        et ne pourra donner lieu à un remboursement. Avant ce
+                        délai de 48 heures, il sera procédé soit à un
+                        remboursement, soit à un avoir, et des frais
+                        d'annulation, d'un montant de 5 % pour un remboursement
+                        et de 3 % pour un avoir, avec un minimum de 1 € dans les
+                        deux cas, seront retenus. En cas de force majeure, à
+                        moins que l'animation et/ou le stage ne puisse être
+                        reporté, il sera procédé à un remboursement intégral.
+                    </p>
+                </div>
+
+                <!-- Article 8.4 -->
+                <div class="sub-article">
+                    <div class="sub-article-title">
+                        Article 8.4 - Activités de découverte
+                    </div>
+                    <p>
+                        Des activités de découverte autour du poney, dites «
+                        <strong>Éveil poney</strong> », sont proposées aux
+                        enfants de 3 et 4 ans. L'inscription s'effectue en
+                        septembre pour l'ensemble des séances prévues au cours
+                        de la saison selon un planning fixe, ce dernier étant
+                        communiqué avant toute réservation. La durée d'une
+                        séance est d'environ 45 minutes.
+                    </p>
+                    <p>
+                        Des séances de découverte, dites «
+                        <strong>séances d'essai</strong> », sont proposées en
+                        fin de saison aux futurs adhérents. Ces séances d'essai
+                        ont pour but de faire découvrir la SHEVA, l'équipe
+                        enseignante et la cavalerie, mais aussi de valider le
+                        niveau équestre du participant en prévision de son
+                        inscription pour la prochaine saison. La durée d'une
+                        séance d'essai est d'environ 1 heure.
+                    </p>
+                    <p>
+                        La réservation et l'inscription définitive aux activités
+                        et séances de découverte ne seront effectives qu'une
+                        fois le règlement correspondant effectué. Par exception,
+                        l'inscription aux activités ou séances de découverte
+                        déroge à l'obligation de l'adhésion à la SHEVA et, pour
+                        les séances d'essai, à l'obligation de présentation de
+                        la licence FFE.
+                    </p>
+                </div>
+
+                <!-- Article 8.5 -->
+                <div class="sub-article">
+                    <div class="sub-article-title">Article 8.5 - Concours</div>
+                    <p>
+                        Les tarifs concours comprennent : les frais d'engagement
+                        aux épreuves, les frais de transport des chevaux, la
+                        location du cheval, et l'encadrement. Ils ne comprennent
+                        pas : l'hébergement du cavalier, les repas, les boissons
+                        et les dépenses personnelles.
+                    </p>
+                    <p>
+                        Les droits d'engagement aux concours pour lesquels la
+                        SHEVA en a avancé le paiement sont fermes et ne donnent
+                        lieu à aucun remboursement ou annulation, ils seront
+                        systématiquement refacturés au Client ; en cas d'absence
+                        d'un Adhérent à un concours prévu au planning de
+                        l'équipe Compétition à l'extérieur du Pôle équestre, la
+                        SHEVA se réserve le droit de facturer au Client une
+                        participation aux frais de transport, ces derniers étant
+                        initialement calculés et répartis sur l'effectif total
+                        de l'équipe Compétition concernée par le concours.
+                    </p>
+                </div>
+
+                <!-- Article 8.6 -->
+                <div class="sub-article">
+                    <div class="sub-article-title">
+                        Article 8.6 - Pensions de chevaux
+                    </div>
+                    <p>
+                        La SHEVA propose de prendre des chevaux en pension
+                        suivant les conditions détaillées dans les contrats de
+                        pension.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Article 9 -->
+            <div class="article">
+                <div class="article-title">Article 9 - Location de casier</div>
+                <p>
+                    Des casiers permettant d'entreposer des affaires
+                    d'équitation peuvent être loués par le Client. La SHEVA se
+                    réserve le droit de l'associer au versement d'un dépôt de
+                    garantie : ce dépôt de garantie sera rendu au Client au
+                    terme de la location, sous réserve que le matériel loué soit
+                    restitué en bon état ; dans le cas contraire, une retenue
+                    totale ou partielle pourra être effectuée.
+                </p>
+                <p>
+                    <span class="highlight"
+                        >Tout casier est loué pour une année</span
+                    >, de la date d'ouverture du Pôle équestre fin août à la
+                    date de fermeture début juillet de l'année suivante. Les
+                    casiers doivent être vidés chaque été. Le montant doit être
+                    réglé avant la prise de possession du casier.
+                </p>
+                <p>
+                    Un casier est loué à un seul Client qui est libre de
+                    sous-louer à d'autres personnes de son choix une partie du
+                    casier selon des modalités qu'il choisit.
+                </p>
+                <p>
+                    La location d'un casier est renouvelée tacitement au Client
+                    chaque année, sous réserve du paiement du montant de la
+                    location. Son non-règlement au 15 septembre de l'année en
+                    cours entraîne la perte du casier. Lorsque le Client
+                    locataire d'un casier ne renouvelle pas son contrat de
+                    location, le sous-locataire éventuel n'a aucun droit
+                    particulier sur la reprise du casier. Un sous-locataire qui
+                    veut bénéficier d'un casier en son nom propre doit placer
+                    son nom sur la liste d'attente des casiers.
+                </p>
+            </div>
+
+            <!-- Article 10 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 10 - Absences et récupérations des forfaits
+                </div>
+                <p>
+                    Il est demandé au Client de prévenir au plus vite la SHEVA
+                    en cas d'absence de l'Adhérent à une séance habituelle de
+                    son forfait, ou après avoir réservé sa place pendant les
+                    périodes de vacances, en annulant sur son compte en ligne la
+                    reprise prévue, afin de permettre aux enseignants de gérer
+                    le travail des chevaux et poneys, et aux autres Adhérents de
+                    récupérer leurs séances manquées.
+                </p>
+                <p>
+                    <span class="highlight"
+                        >En cas d'absence signalée au moins 24 heures à
+                        l'avance</span
+                    >
+                    par la désinscription de l'Adhérent sur le compte en ligne,
+                    un bon de récupération sera généré et permettra de rattraper
+                    la séance manquée.
+                </p>
+                <p>
+                    Un bon de récupération est valable dès son obtention et pour
+                    une durée de deux mois à compter de la reprise annulée ou
+                    jusqu'à la fin du forfait en cours, selon la date la plus
+                    précoce. Il ne pourra être utilisé que pour des reprises de
+                    niveau équivalent, dans la limite des places disponibles, et
+                    à l'exclusion des séances de saut d'obstacles et du dernier
+                    mois de la saison, afin de ménager les équidés.
+                </p>
+                <p>
+                    <span class="highlight"
+                        >Un maximum de 6 séances par forfait annuel ou 3 séances
+                        par forfait semestriel</span
+                    >
+                    peut être récupéré par saison.
+                </p>
+                <p>
+                    L'inscription à une reprise en récupération doit être
+                    réalisée en ligne, avant 20 h la veille. Toute récupération
+                    réservée et non effectuée est définitivement perdue.
+                </p>
+            </div>
+
+            <!-- Article 11 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 11 - Assurance interruption/annulation
+                </div>
+                <p>
+                    <strong
+                        >Les forfaits ne peuvent faire l'objet d'aucun
+                        remboursement par la SHEVA</strong
+                    >, quelles que soient les circonstances d'une interruption
+                    d'activité de l'Adhérent.
+                </p>
+                <p>
+                    Le Client a la possibilité de souscrire une assurance
+                    interruption/annulation, ouvrant droit à une indemnisation
+                    en cas d'incapacité temporaire ou définitive à la pratique
+                    équestre. Cette opération est facultative et doit être
+                    réalisée par le Client directement auprès de l'organisme
+                    assureur partenaire de la SHEVA, dans un délai de 30
+                    (trente) jours après l'achat du forfait concerné.
+                </p>
+                <p>
+                    Les modalités de souscription (formalités pratiques, coût de
+                    l'assurance) et les garanties afférentes (conditions
+                    d'application de l'indemnisation de la période visée) de
+                    l'assurance interruption/annulation sont détaillées dans la
+                    notice disponible sur le site Internet de la SHEVA
+                    (www.sheva.fr) et affichée dans l'établissement.
+                </p>
+                <p>
+                    Les demandes d'information et les réclamations éventuelles
+                    relatives à l'assurance interruption/annulation sont
+                    intégralement traitées par l'organisme assureur. La SHEVA
+                    n'interviendra en aucun cas entre le Client et l'organisme
+                    assureur, et ne saurait être tenue responsable en cas de
+                    litige entre le Client et l'organisme assureur.
+                </p>
+            </div>
+
+            <!-- Article 12 -->
+            <div class="article">
+                <div class="article-title">Article 12 - Paiement</div>
+                <p>
+                    <strong>Prix.</strong> Le tarif en vigueur est celui
+                    existant au jour de la commande, en cas de changement
+                    ultérieur. Les commandes passées sur le site Internet sont
+                    payables en Euros.
+                </p>
+                <p>
+                    <strong>Modalités de paiement.</strong> Le paiement
+                    s'effectue au moment de la validation de la commande.
+                    Différentes possibilités d'encaissement peuvent être
+                    proposées au moment du règlement, selon le produit acheté
+                    (paiements comptants ou échelonnés ; carte bancaire ou
+                    chèques).
+                </p>
+                <p>
+                    <strong>Validité.</strong> Les offres sont valables pendant
+                    la durée de leur présence sur le site.
+                </p>
+                <p>
+                    <strong>Sécurisation.</strong> Le site bénéficie d'un
+                    système de paiement sécurisé.
+                </p>
+                <p>
+                    <strong>Validation.</strong> Lorsque le Client valide le
+                    processus de commande, il déclare accepter celle-ci ainsi
+                    que l'ensemble des présentes CGV, pleinement et sans
+                    réserve. Les données enregistrées par le système de paiement
+                    constituent la preuve des transactions financières passées
+                    entre le Client et la SHEVA.
+                </p>
+            </div>
+
+            <!-- Article 13 -->
+            <div class="article">
+                <div class="article-title">Article 13 - Force majeure</div>
+                <p>
+                    En cas d'événement de force majeure (au sens de l'Article
+                    1218 du Code civil) entraînant une fermeture exceptionnelle
+                    et indépendante de la volonté du Pôle équestre, ou un
+                    empêchement à la pratique collective de l'activité équestre
+                    sur le site, les forfaits pourront être suspendus jusqu'à
+                    cessation de l'événement en cause. Dans ce cas, les reprises
+                    manquées pourront être reportées à une date ultérieure, et
+                    de ce fait aucune demande de remboursement ne sera acceptée.
+                </p>
+            </div>
+
+            <!-- Article 14 -->
+            <div class="article">
+                <div class="article-title">Article 14 - Assurances</div>
+                <p>
+                    <span class="highlight"
+                        >Tous les cavaliers, excepté ceux participant aux
+                        séances de découverte (séances d'essai), doivent être
+                        titulaires de la licence fédérale</span
+                    >
+                    qui les couvre, pendant la pratique de l'équitation, en
+                    responsabilité civile pour les dommages qu'ils causent, et
+                    en individuelle accident pour les dommages qu'ils subissent.
+                </p>
+                <p>
+                    Tout Client, lors de son inscription ou de celle du tiers
+                    Adhérent au nom duquel il agit, atteste prendre connaissance
+                    de l'étendue et des limites de garanties qui lui sont ainsi
+                    accordées, des extensions possibles, ainsi que des
+                    formalités en cas de sinistre. Il peut notamment, s'il le
+                    souhaite, souscrire une assurance complémentaire à
+                    l'assurance procurée par sa licence fédérale, offrant une
+                    assistance plus complète en cas d'accident. Ces informations
+                    sont également affichées dans l'établissement, disponibles
+                    sur demande et consultables sur le site www.ffe.com.
+                </p>
+                <p>
+                    Conformément à l'Article L. 321-1 du Code du sport, la SHEVA
+                    souscrit une assurance responsabilité civile professionnelle
+                    couvrant :
+                </p>
+                <ul>
+                    <li>
+                        sa propre responsabilité et celle de son encadrement ;
+                    </li>
+                    <li>
+                        la responsabilité civile des Adhérents pour dommages
+                        corporels et matériels causés à des tiers dans le cadre
+                        des activités équestres, lorsque la responsabilité de la
+                        SHEVA est engagée ;
+                    </li>
+                    <li>
+                        la responsabilité civile des non-Adhérents pour dommages
+                        corporels et matériels causés à des tiers dans le cadre
+                        des activités et séances de découverte prévues à
+                        l'Article 8.4 des présentes CGV, lorsque la
+                        responsabilité de la SHEVA est engagée.
+                    </li>
+                </ul>
+                <p>
+                    <strong
+                        >La responsabilité de la SHEVA est dégagée dans le cas
+                        d'un accident provoqué par une inobservation du
+                        Règlement intérieur.</strong
+                    >
+                </p>
+                <p>
+                    En cas d'accident au cours de la pratique, une déclaration
+                    d'accident doit parvenir à la compagnie d'assurance dans les
+                    quinze (15) jours suivant l'accident (fournir le certificat
+                    médical initial de constatation des blessures). Cette
+                    déclaration est faite par le club.
+                </p>
+            </div>
+
+            <!-- Article 15 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 15 - Litige – Droit applicable
+                </div>
+                <p>
+                    La SHEVA est à la disposition de ses Clients pour régler les
+                    éventuels litiges, au mieux et à l'amiable. Dans le cas
+                    contraire, le Client peut envoyer une réclamation au Conseil
+                    d'Administration par courrier recommandé avec Avis de
+                    Réception.
+                </p>
+                <p>
+                    Dans le cas où le litige ne pourrait être réglé à l'amiable,
+                    le tribunal compétent est celui dont dépend le siège de
+                    l'Association.
+                </p>
+            </div>
+
+            <!-- Article 16 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 16 - Vidéosurveillance – Droit à l'image
+                </div>
+                <p>
+                    La SHEVA est placée sous vidéosurveillance pour des raisons
+                    de sécurité des biens, des personnes et des équidés. Les
+                    conditions du droit à l'image sont définies dans le
+                    Règlement intérieur.
+                </p>
+            </div>
+
+            <!-- Article 17 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 17 - Protection des données personnelles
+                </div>
+                <p>
+                    La SHEVA met en œuvre les moyens nécessaires pour respecter
+                    les dispositions applicables en matière de protection des
+                    données personnelles.
+                </p>
+                <p>
+                    La SHEVA dispose d'un fichier informatique recensant les
+                    données fournies par les Clients, qui y ont expressément
+                    consenti. Seules les personnes ayant des fonctions de
+                    secrétariat, d'encadrement et de direction au sein de
+                    l'établissement ont accès à ces données dans le cadre de
+                    leur mission.
+                </p>
+                <p>
+                    <span class="highlight"
+                        >Les données sont conservées cinq (5) ans après la fin
+                        de la relation contractuelle.</span
+                    >
+                    Toute personne ayant fourni des données personnelles dispose
+                    directement auprès de l'établissement d'un droit d'accès, de
+                    portabilité et de rectification, conformément à la loi n°
+                    78-17 du 6 janvier 1978 relative à l'informatique, aux
+                    fichiers et aux libertés, modifiée par la loi n° 2018-493 du
+                    20 juin 2018 mettant en œuvre le Règlement (UE) 2016/679 du
+                    27 avril 2016 sur la protection des données personnelles («
+                    RGPD »). Elle peut exercer ses droits par l'envoi d'un
+                    simple courriel à l'adresse électronique de l'établissement
+                    prévue à cet effet.
+                </p>
+            </div>
+
+            <!-- Article 18 -->
+            <div class="article">
+                <div class="article-title">
+                    Article 18 - Droit de rétractation
+                </div>
+                <p>
+                    Le Client dispose, selon l'Article L221-18 du Code de la
+                    consommation, d'un droit de rétractation de 14 jours à
+                    compter de la date d'achat d'une prestation de services ;
+                    dans le cas où le Client souhaite user de ce droit, il doit
+                    en faire la demande par l'envoi d'une lettre recommandée.
+                </p>
+                <p>
+                    Toutefois, le Client reconnaît avoir été informé que, selon
+                    l'Article L221-28 du Code de la consommation, le droit de
+                    rétractation cité ci-avant ne peut être exercé pour les
+                    activités de loisirs qui doivent être fournies à une date ou
+                    à une période déterminée. Tel est le cas pour les
+                    prestations listées de l'Article 8.1 à l'Article 8.5 des
+                    présentes CGV.
+                </p>
+            </div>
+
+            <!-- Section Application -->
+            <div class="application-section">
+                <h2>APPLICATION</h2>
+                <p>
+                    Le fonctionnement du Pôle équestre SHEVA est régi par trois
+                    documents :
+                </p>
+                <ul>
+                    <li>Les Statuts de l'Association</li>
+                    <li>Le Règlement Intérieur (RI)</li>
+                    <li>Les présentes Conditions Générales de Vente (CGV)</li>
+                </ul>
+                <p>
+                    <strong
+                        >Je déclare avoir pris connaissance de ces trois
+                        documents et je m'engage à les respecter.</strong
+                    >
+                </p>
+                <p>
+                    <strong
+                        >Je déclare avoir pris connaissance des conditions
+                        d'assurance de la licence fédérale et des possibilités
+                        qui me sont données de souscrire des garanties
+                        complémentaires,</strong
+                    >
+                    et ce conformément à l'Article L321-4 du Code du sport.
+                </p>
+                <p>
+                    <strong
+                        >Je déclare avoir été informé(e) que les documents
+                        précités, ainsi que les comptes-rendus approuvés des
+                        réunions du Conseil d'Administration,</strong
+                    >
+                    peuvent être mis à ma disposition sur simple demande et sont
+                    disponibles à l'accueil et en ligne sur le site Internet de
+                    la SHEVA (www.sheva.fr).
+                </p>
+                <p>
+                    <strong
+                        >Je certifie avoir en ma possession un certificat
+                        médical d'absence de contre-indication à la pratique de
+                        l'équitation au nom de l'Adhérent</strong
+                    >
+                    (loi n° 2022-296 du 2 mars 2022 visant à démocratiser le
+                    sport en France) ou, à défaut, je décharge la SHEVA de toute
+                    conséquence d'une éventuelle contre-indication. En cas
+                    d'accident nécessitant une intervention urgente, j'autorise
+                    la SHEVA à prendre toute décision concernant le transport et
+                    l'hospitalisation de moi-même ou de mon enfant mineur. Il
+                    est recommandé d'être à jour de son rappel antitétanique.
+                </p>
+
+                <!-- Section signature pour version papier -->
+                <div class="signature-section">
+                    <h3>
+                        En cas de version papier pour un achat réalisé sur place
+                    </h3>
+                    <div class="form-fields">
+                        <div class="form-field">
+                            <label>Prénom et Nom du Client :</label>
+                            <input
+                                type="text"
+                                style="
+                                    border-bottom: 1px solid #ccc;
+                                    background: transparent;
+                                "
+                            />
+                        </div>
+                        <div class="form-field">
+                            <label>Né(e) le :</label>
+                            <input
+                                type="text"
+                                style="
+                                    border-bottom: 1px solid #ccc;
+                                    background: transparent;
+                                "
+                            />
+                        </div>
+                        <div class="form-field">
+                            <label
+                                >[Pour les mineurs] Représentant légal de
+                                :</label
+                            >
+                            <input
+                                type="text"
+                                style="
+                                    border-bottom: 1px solid #ccc;
+                                    background: transparent;
+                                "
+                            />
+                        </div>
+                        <div class="form-field">
+                            <label>Fait à CRÉTEIL, le :</label>
+                            <input
+                                type="text"
+                                style="
+                                    border-bottom: 1px solid #ccc;
+                                    background: transparent;
+                                "
+                            />
+                        </div>
+                    </div>
+                    <p
+                        style="
+                            margin-top: 2rem;
+                            font-weight: bold;
+                            color: rgb(94, 180, 174);
+                        "
+                    >
+                        Signature du Client précédée de la mention « Lu et
+                        approuvé », valant acceptation des présentes CGV :
+                    </p>
+                    <div
+                        style="
+                            height: 80px;
+                            border: 2px dashed #ccc;
+                            margin-top: 1rem;
+                            border-radius: 8px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #999;
+                        "
+                    >
+                        Zone de signature
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact info -->
+            <div class="contact-info">
+                <p>
+                    <strong>Pôle équestre SHEVA</strong><br />
+                    Chemin des Bœufs, Parc Interdépartemental des Sports<br />
+                    94000 CRÉTEIL
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a
+                            href="https://www.instagram.com/l.apres.sheva?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            rel="noopener noreferrer"
+                            aria-label="Suivez-nous sur Instagram"
+                        >
+                            <i class="fab fa-instagram"></i>
+                            Instagram
+                        </a>
+                        <a
+                            href="https://www.facebook.com/ClubSheva"
+                            rel="noopener noreferrer"
+                            aria-label="Suivez-nous sur Facebook"
+                        >
+                            <i class="fab fa-facebook-f"></i>
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Parc Interdépartemental des Sports</p>
+                    <p>Créteil Pompadour</p>
+                    <p>📞 <a href="tel:+33148123456">01 48 12 34 56</a></p>
+                    <p>
+                        📧
+                        <a href="mailto:contact@sheva.fr">contact@sheva.fr</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Accès</h3>
+                    <p>🚆 RER D - Créteil Pompadour</p>
+                    <p>🚇 Métro ligne 8 + TVM</p>
+                    <p>🚌 Bus O1, O2, 393</p>
+                    <p>🚗 A86 - Parking gratuit</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens Utiles</h3>
+                    <p>
+                        <a href="../pages/cgv.html"
+                            >Conditions Générales de Vente</a
+                        >
+                    </p>
+                    <p>
+                        <a href="../pages/politique_conf.html"
+                            >Politique de Confidentialité</a
+                        >
+                    </p>
+                    <p>
+                        <a href="https://cloud6.kavalog.fr/SHEVA/">
+                            Mon compte</a
+                        >
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logos">
+                    <img
+                        src="../images/logo-valdemarne.png"
+                        alt="Val-de-Marne"
+                    />
+                    <img src="../images/logo-idf.webp" alt="Ile de France" />
+                    <img src="../images/logo-creteil.png" alt="Créteil" />
+                    <img
+                        src="../images/logo-ans.png"
+                        alt="Angence Nationale du Sport"
+                    />
+                    <img src="../images/fonds-eperon.png" alt="Fonds Éperon" />
+                    <img
+                        src="../images/logo-inspiraction.png"
+                        alt="Inspiraction Consulting"
+                    />
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2025 SHEVA. Tous droits réservés.
+                </p>
+            </div>
+        </footer>
+        <button class="scroll-to-top" id="scrollToTop" title="Remonter en haut">
+            ↑
+        </button>
+        <!-- JavaScript -->
+        <script src="../js/navigation.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

@@ -1936,12 +1936,24 @@ body {
 
 /* Page Hero */
 .page-hero {
-    background: linear-gradient(135deg, rgb(94, 180, 174), rgb(69, 144, 150));
+    background: linear-gradient(
+        135deg,
+        rgba(94, 180, 174, 0.8),
+        rgba(69, 144, 150, 0.8)
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 4rem 0;
     z-index: 1;
     text-align: center;
     position: relative;
+}
+
+/* Quand il y a une image en style inline, on la combine avec le gradient */
+.page-hero[style*="background-image"] {
+    background-blend-mode: overlay;
 }
 
 .page-title {

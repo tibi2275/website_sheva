@@ -696,12 +696,12 @@ function initSimulator() {
                 repriseKey = currentLevel; // galop1, galop2, etc.
             }
         } else if (
-            forfaitKey === "perfectionnement" ||
+            forfaitKey === "perfectionnement" &&
             currentLevel === "galop6"
         ) {
             repriseKey = "perf_1h30g6";
         } else if (
-            forfaitKey === "perfectionnement" ||
+            forfaitKey === "perfectionnement" &&
             currentLevel === "galop7"
         ) {
             repriseKey = "perf_1h30g7";

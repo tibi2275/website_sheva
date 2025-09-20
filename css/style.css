@@ -1363,7 +1363,7 @@ body {
 
 /* ===== SECTIONS COMMUNES ===== */
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: rgb(94, 180, 174);
     margin-bottom: 3rem;
     text-align: center;
@@ -1747,6 +1747,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 60px; /* Définis une hauteur minimale */
 }
 
 .footer-logos {
@@ -1756,13 +1757,11 @@ body {
 }
 
 .footer-logos img {
-    height: 50px; /* Ajustez selon vos besoins */
-    width: auto;
-    background: #ffffff;
-}
-
-.footer-logos img:hover {
-    opacity: 0;
+    height: auto;
+    width: 90px; /* Largeur de base */
+    max-height: 50px; /* Hauteur maximale */
+    min-width: 70px; /* Largeur minimale */
+    object-fit: contain;
 }
 
 .footer-copyright {
@@ -3739,7 +3738,7 @@ body {
     color: rgb(94, 180, 174);
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 2.6rem;
 }
 
 .calendar-grid-wrapper {
@@ -4850,12 +4849,12 @@ body {
 /* ===== STYLES REMISES FAMILLE NOMBREUSE ===== */
 
 .discount-line .breakdown-label {
-    color: #4caf50;
+    color: #f8f9fa;
     font-weight: bold;
 }
 
 .discount-line .breakdown-value {
-    color: #4caf50;
+    color: #f8f9fa;
     font-weight: bold;
 }
 

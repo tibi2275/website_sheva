@@ -8,6 +8,7 @@ const reprisesByLevel = {
         { id: "deb_ven_17h", day: "Vendredi", time: "17h30" },
         { id: "deb_sam_11h", day: "Samedi", time: "11h30" },
         { id: "deb_sam_12h", day: "Samedi", time: "12h15" },
+        { id: "deb_sam_17h", day: "Samedi", time: "17h00" },
     ],
     debutant_chev: [
         { id: "debch_mer_18h", day: "Mercredi", time: "18h00" },
@@ -44,11 +45,7 @@ const reprisesByLevel = {
             day: "Samedi",
             time: "15h00",
         },
-        {
-            id: "bronze_sam_17h",
-            day: "Samedi",
-            time: "17h00",
-        },
+
         {
             id: "bronze_dim_11h",
             day: "Dimanche",

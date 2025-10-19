@@ -1277,13 +1277,6 @@ body {
 
 /* ===== HERO BANNER ===== */
 .hero-banner {
-    background: linear-gradient(
-            rgba(255, 255, 255, 0.3),
-            rgba(69, 144, 169, 0.4)
-        ),
-        url("../images/Images\ illustrations/0d33c4f9-64e2-4e20-96c0-fcbc419a827d.jpg");
-    background-size: cover;
-    background-position: center;
     color: white;
     text-align: center;
     padding: 8rem 2rem 6rem;
@@ -1292,6 +1285,35 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Important pour la vidéo */
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Overlay gradient par-dessus la vidéo */
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.3),
+        rgba(69, 144, 169, 0.4)
+    );
+    z-index: 0;
 }
 
 .hero-content {
@@ -1305,12 +1327,20 @@ body {
     font-weight: bold;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: rgb(94, 180, 174);
+    background-color: rgba(255, 255, 255, 0.737);
+    padding: 0.5rem;
+    border-radius: 12px;
 }
 
 .hero-subtitle {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.165);
+    border-radius: 12px;
+    padding: 5px;
 }
 
 .hero-description {
@@ -1320,7 +1350,8 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    background: rgba(6, 6, 6, 0.204);
+    background-color: rgba(0, 0, 0, 0.165);
+
     border-radius: 12px; /* arrondi des angles */
     padding: 0.5rem; /* pour éviter que le texte colle au bord */
 }
@@ -2079,7 +2110,7 @@ body {
 
 .ca-image {
     height: 300px;
-    background: linear-gradient(45deg, rgb(94, 180, 174), rgb(69, 144, 150));
+    background: linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2090,7 +2121,8 @@ body {
 }
 
 .ca-image img {
-    width: 100%;
+    width: auto;
+
     height: 100%;
     object-fit: cover;
 }
@@ -2197,8 +2229,8 @@ body {
 .team-photo {
     width: 400px;
     min-width: 200px;
-    height: auto;
-    min-height: 200px;
+    height: auto; /* La hauteur s'adaptera automatiquement */
+    min-height: auto; /* Supprimez le min-height fixe */
     background: linear-gradient(45deg, rgb(94, 180, 174), rgb(69, 144, 150));
     display: flex;
     align-items: center;
@@ -2207,11 +2239,11 @@ body {
     font-size: 3rem;
     overflow: hidden;
 }
-
 .team-photo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 100%; /* Changez de 100% à auto */
+    object-fit: cover; /* Changez de cover à contain */
+    display: block; /* Évite les espaces indésirables */
 }
 
 .team-info {
@@ -2287,8 +2319,6 @@ body {
     .team-photo {
         width: 100%;
         min-width: unset;
-        height: 200px;
-        min-height: 200px;
     }
 }
 

@@ -502,22 +502,9 @@ body {
         padding: 1.5rem;
     }
 
-    .preview-image,
-    .news-image {
-        height: 120px;
-        font-size: 2rem;
-    }
-
     /* Team mobile */
     .team-card {
         flex-direction: column;
-    }
-
-    .team-photo {
-        width: 100%;
-        min-width: unset;
-        height: 200px;
-        min-height: 200px;
     }
 
     /* Planning mobile */

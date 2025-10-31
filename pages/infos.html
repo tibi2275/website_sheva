@@ -19,245 +19,7 @@
 
         <style>
             /* Styles spécifiques pour l'espace personnel */
-            .online-features-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
-                margin: 3rem 0;
-            }
-
-            .online-feature-card {
-                background: white;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-                transition: transform 0.3s ease;
-            }
-
-            .online-feature-card:hover {
-                transform: translateY(-5px);
-            }
-
-            .feature-header {
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                color: white;
-                padding: 1.5rem;
-                text-align: center;
-            }
-
-            .feature-icon {
-                font-size: 2.5rem;
-                display: block;
-                margin-bottom: 0.5rem;
-            }
-
-            .feature-header h3 {
-                margin: 0;
-                font-size: 1.2rem;
-            }
-
-            .feature-content {
-                padding: 1.5rem;
-            }
-
-            .feature-list {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            .feature-list li {
-                margin-bottom: 0.8rem;
-                padding-left: 1.5rem;
-                position: relative;
-                font-size: 0.9rem;
-                line-height: 1.4;
-            }
-
-            .feature-list li::before {
-                content: "✓";
-                position: absolute;
-                left: 0;
-                color: #4a7c59;
-                font-weight: bold;
-            }
-
-            .online-access-info {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
-                margin-top: 3rem;
-            }
-
-            .access-card,
-            .compatibility-card {
-                background: white;
-                padding: 2rem;
-                border-radius: 15px;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            }
-
-            .access-card h3,
-            .compatibility-card h3 {
-                color: #2d5016;
-                margin-bottom: 1.5rem;
-                font-size: 1.3rem;
-            }
-
-            .access-buttons {
-                display: flex;
-                gap: 1rem;
-                flex-wrap: wrap;
-                margin-top: 1.5rem;
-            }
-
-            .compatibility-content {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .compatibility-item {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                padding: 1rem;
-                background: #f8f9fa;
-                border-radius: 8px;
-            }
-
-            .compat-icon {
-                font-size: 1.5rem;
-                flex-shrink: 0;
-            }
-
-            /* Styles pour la FAQ */
-            .faq-introduction {
-                background: white;
-                padding: 2rem;
-                border-radius: 15px;
-                margin-bottom: 3rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                text-align: center;
-            }
-
-            .faq-accordion {
-                display: flex;
-                flex-direction: column;
-                gap: 2rem;
-            }
-
-            .faq-section {
-                background: white;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            }
-
-            .faq-section-title {
-                background: linear-gradient(
-                    45deg,
-                    rgb(15, 73, 70),
-                    rgb(69, 144, 150)
-                );
-                color: white;
-                padding: 1.5rem;
-                margin: 0;
-                font-size: 1.3rem;
-                text-align: center;
-            }
-
-            .faq-item {
-                border-bottom: 1px solid #e9ecef;
-            }
-
-            .faq-item:last-child {
-                border-bottom: none;
-            }
-
-            .faq-question {
-                padding: 1.5rem;
-                background: #f8f9fa;
-                cursor: pointer;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                transition: background-color 0.3s ease;
-            }
-
-            .faq-question:hover {
-                background: #e9ecef;
-            }
-
-            .faq-question span:first-child {
-                font-weight: 600;
-                color: rgb(15, 73, 70);
-                font-size: 1rem;
-            }
-
-            .faq-toggle {
-                background: rgb(15, 73, 70);
-                color: white;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-                font-size: 1.2rem;
-                transition: all 0.3s ease;
-                flex-shrink: 0;
-            }
-
-            .faq-item.active .faq-toggle {
-                background: #ff6b35;
-            }
-
-            .faq-answer {
-                display: none;
-                padding: 1.5rem;
-                background: white;
-                line-height: 1.6;
-            }
-
-            .faq-item.active .faq-answer {
-                display: block;
-                animation: fadeInDown 0.3s ease-out;
-            }
-
-            @keyframes fadeInDown {
-                from {
-                    opacity: 0;
-                    transform: translateY(-10px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            .faq-contact {
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                color: white;
-                padding: 3rem;
-                border-radius: 15px;
-                text-align: center;
-                margin-top: 3rem;
-            }
-
-            .faq-contact h3 {
-                margin-bottom: 1rem;
-                font-size: 1.8rem;
-            }
+            
         </style>
     </head>
     <body>
@@ -312,7 +74,7 @@
                             <a href="../pages/activites.html">Les activités</a>
                             <div class="dropdown">
                                 <a href="../pages/activites.html#cours"
-                                    >Nos Cours</a
+                                    >Cours d'Équitation</a
                                 >
                                 <a href="../pages/activites.html#competition"
                                     >Competition</a
@@ -321,7 +83,7 @@
                                     >Examens et Galops</a
                                 >
                                 <a href="../pages/activites.html#activites"
-                                    >Activités</a
+                                    >Stages et Sorties</a
                                 >
                             </div>
                         </li>
@@ -596,15 +358,22 @@
 
                     <div class="content-text text-center mb-2">
                         <p>
-                            <em
-                                >La SHEVA vous accueille de fin août à début
+                            
+                                La SHEVA vous accueille de fin août à début
                                 juillet, et fonctionne sur la base de forfaits
                                 avec reprises hebdomadaires, animations le
                                 dimanche, et programmes adaptés pendant les
-                                vacances scolaires.</em
-                            >
+                                vacances scolaires. <br>
                         </p>
+                        <p>
+                            
+                                Consultez notre réglement intérieur pour tout connaitre sur le fonctionnement du club.
+                            
+                        </p>
+                        <a class="cta-primary"  href="../PDF_docs/Reglement_interieur_SHEVA_2025_v12.pdf">Réglement Intérieur</a>
+
                     </div>
+
 
                     <div class="content-grid">
                         <div class="content-card">
@@ -684,7 +453,7 @@
                                 </li>
                                 <li>
                                     Reprise progressive du travail à la rentrée avec
-                                    des séances de travail à pieds et au pas.
+                                    des séances de travail à pied et au pas.
                                 </li>
                             </ul>
                         </div>
@@ -882,18 +651,23 @@
                                     class="preview-link"
                                     >votre espace personnel.</a
                                 ></strong
-                            >
-                            Consultez la
+                            > Consultez la
                             <a
                                 href="../pages/infos.html#faq"
                                 class="preview-link"
                                 >FAQ</a
                             >
                             en cas de problèmes. <br>
-                            Les informations affichées correspondent aux inscriptions pour la <strong>saison 2025-2026</strong>. <br>
-                            Les dates seront mises à jour chaque année au mois d'avril.
+                            
                         </p>
                     </div>
+                    <div class="parking-info">
+                            <h4>⚠️ Informations inscriptions</h4>
+                            <p>
+                            Les informations affichées correspondent aux inscriptions pour la <strong>saison 2025-2026</strong>. <br>
+                            Les dates seront mises à jour chaque année au mois d'avril.
+                            </p>
+                        </div>
                     <div class="content-grid">
                         <div class="content-card">
                             <h3 class="subsection-title">
@@ -1025,17 +799,16 @@
 
                                 <p><strong>Points importants :</strong></p>
                                 <ul class="function-list">
-                                    <li>Compte à jour (pas de débiteur)</li>
+                                    <li>Compte à jour (non débiteur)</li>
                                     <li>
-                                        Vérifiez la connection à votre compte
+                                        Vérifiez la connexion à votre compte
                                     </li>
                                     <li>
                                         Consultez votre moniteur pour vous
                                         flécher vers le bon niveau
                                     </li>
                                     <li>
-                                        Paiement CB dans les 2h. ⚠️ Système de
-                                        paiement non disponible à l'étranger.
+                                        Paiement CB dans les 2h. ⚠️ Système de paiement non disponible en dehors des pays de la zone SEPA, des États-Unis et du Canada..
                                     </li>
                                     <li>
                                         Max 2 forfaits les 24 premières heures
@@ -1189,9 +962,11 @@
                     5B534776-49E8-44CB-8F45-DB560DD110B7.jpeg,
                     6F361C0E-96BA-4ACA-B1CF-BE307A707FA3.jpeg,
                     716FFD1A-9DAB-4C9B-B69D-3A5C63EFE19C.jpeg,
+                    WhatsApp Image 2025-10-29 at 23.04.36.jpeg,
                     72E273B8-51EB-438E-9854-8B7356E8FE29.jpeg,
                     74E1B71E-0E50-48A1-B243-6A8F087A311F.jpeg,
                     7ADB5A57-7646-4C77-922C-FDA48C420C7D.jpeg,
+                    eveil-photo.jpg,
                     90BFDB09-0FE9-44CA-8016-85CC1A1160CB.jpeg,
                     95756EC0-387D-4D46-8D8A-414A95499F30.jpeg,
                     A4B43F1B-44A0-42E5-8C0A-F4F979CC35E6.jpeg,
@@ -1206,8 +981,10 @@
                     club-house.jpeg,
                     compte-illustration.avif,
                     DD92B457-0BE5-4FF8-8F75-A3FAA2E6A827.jpeg,
+                    WhatsApp Image 2025-10-29 at 23.07.31.jpeg,
                     DF78B272-7058-44B3-93C4-A210C106D212.jpeg,
                     E0194BD2-0257-4E6E-A88B-82B38E25E2CB.jpeg,
+                    WhatsApp Image 2025-10-29 at 23.13.55.jpeg,
                     E0486C42-EAE0-4795-9095-59D7B6F62EE9.jpeg,
                     ecuries-illustration.avif,
                     F1863E89-6A53-468F-884A-64E0D413A911.jpeg,
@@ -1334,6 +1111,7 @@
                                         fait depuis votre
                                         <a
                                             href="https://cloud6.kavalog.fr/SHEVA/"
+                                            class="preview-link"
                                             >Espace Personnel</a
                                         >, quelques jours avant la séance d'essai. <br />
                                         Référez-vous à la sections dédiée à
@@ -1426,6 +1204,7 @@
                                         Retrouver les dates et les détails des forfaits dans la section 
                                         <a
                                             href="../pages/planning.html#planning"
+                                            class="preview-link"
                                             >planning</a
                                         >
                                         pour les détails.
@@ -1460,6 +1239,7 @@
                                         Les annulations se font depuis votre
                                         <a
                                             href="https://cloud6.kavalog.fr/SHEVA/"
+                                            class="preview-link"
                                             >Espace Personnel</a
                                         >. C'est depuis cet espace que vous
                                         pouvez également vous inscrire aux
@@ -1506,6 +1286,7 @@
                                         se font depuis votre
                                         <a
                                             href="https://cloud6.kavalog.fr/SHEVA/"
+                                            class="preview-link"
                                             >Espace Personnel</a
                                         >. <br />
                                         Pour s'inscrire, dans l'onglet "Mes
@@ -1569,6 +1350,7 @@
                                         vous sur votre
                                         <a
                                             href="https://cloud6.kavalog.fr/SHEVA/"
+                                            class="preview-link"
                                             >Espace Personnel</a
                                         >. <br />
                                         <br />
@@ -1596,6 +1378,7 @@
                                         pas dans cette démarche :
                                         <a
                                             href="../PDF_docs/notice-nouveaux.pdf"
+                                            class="preview-link"
                                             >Notice Création de Compte</a
                                         >
                                         <br />
@@ -1605,6 +1388,7 @@
                                         contacter en utilisant les adresses
                                         adaptées :
                                         <a href="../pages/infos.html#contact"
+                                            class="preview-link"
                                             >Contact</a
                                         >
                                     </p>
@@ -1623,6 +1407,7 @@
                                         Rendez vous sur votre
                                         <a
                                             href="https://cloud6.kavalog.fr/SHEVA/"
+                                            class="preview-link"
                                             >Espace Personnel</a
                                         >. <br />
                                         <br />
@@ -1653,6 +1438,7 @@
                                         connectez-vous à votre
                                         <a
                                             href="https://cloud6.kavalog.fr/SHEVA/"
+                                            class="preview-link"
                                             >Espace Personnel</a
                                         >.
                                         <br />
@@ -1696,6 +1482,7 @@
                                         connectez-vous à votre
                                         <a
                                             href="https://cloud6.kavalog.fr/SHEVA/"
+                                            class="preview-link"
                                             >Espace Personnel</a
                                         >.
                                         <br />
@@ -1734,6 +1521,7 @@
                                         Connectez-vous à votre
                                         <a
                                             href="https://cloud6.kavalog.fr/SHEVA/"
+                                            class="preview-link"
                                             >Espace Personnel</a
                                         >.
                                         <br />
@@ -1826,6 +1614,7 @@
                                         Consultez
                                         <a
                                             href="../pages/planning.html#annulation"
+                                            class="preview-link"
                                             >les modalités</a
                                         >
                                         pour en savoir plus.
@@ -2042,8 +1831,16 @@
                         >
                     </p>
                     <p>
-                        <a href="https://cloud6.kavalog.fr/SHEVA/">
-                            Mon compte</a
+                        <a
+                            href="../PDF_docs/charte_de_la_laicite signee 2024.pdf"
+                            >Charte de la Laïcité</a
+                        >
+                    </p>
+                    <p>
+                        <a
+                            href="../PDF_docs/Reglement_interieur_SHEVA_2025_v12.pdf"
+                        >
+                            Réglement Intérieur</a
                         >
                     </p>
                 </div>

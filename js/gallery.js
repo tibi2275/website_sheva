@@ -35,9 +35,12 @@ class PhotoGallery {
 
     init() {
         this.loadPhotosFromList();
+        this.calculateCenterOffset();
+        this.currentIndex = this.photoList.length;
         this.createGalleryItems();
         this.setupEventListeners();
         this.calculateVisibleItems();
+        this.updateGalleryPosition();
         this.startAutoSlide();
     }
 
@@ -48,6 +51,15 @@ class PhotoGallery {
             (photo) => `${this.folderPath}/${photo}`
         );
         this.photos = [...fullPaths, ...fullPaths]; // Dupliquer pour l'effet de boucle
+    }
+
+    // Calculer l'offset de centrage initial
+    calculateCenterOffset() {
+        if (this.container) {
+            const containerWidth = this.container.offsetWidth;
+            // Calculer le padding nécessaire pour centrer la première photo
+            this.centerOffset = containerWidth / 2 - this.itemWidth / 2;
+        }
     }
 
     // Calculer le nombre d'items visibles selon la largeur du conteneur
@@ -91,10 +103,12 @@ class PhotoGallery {
     }
 
     // Mettre à jour la position de la galerie
+    // Mettre à jour la position de la galerie
     updateGalleryPosition() {
         const track = this.container.querySelector(".gallery-track");
         if (track) {
-            const translateX = -this.currentIndex * this.itemWidth;
+            const translateX =
+                this.centerOffset - this.currentIndex * this.itemWidth;
             track.style.transform = `translateX(${translateX}px)`;
         }
     }
@@ -132,6 +146,7 @@ class PhotoGallery {
         // Recalculer lors du redimensionnement
         window.addEventListener("resize", () => {
             this.calculateVisibleItems();
+            this.calculateCenterOffset();
             this.updateGalleryPosition();
         });
 

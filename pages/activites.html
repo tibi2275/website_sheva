@@ -21,688 +21,6 @@
 
         <style>
             /* Styles spécifiques pour la page activités */
-
-            @keyframes slideDown {
-                from {
-                    opacity: 0;
-                    transform: translateY(-20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            /* Cours styles */
-            .courses-intro {
-                background: white;
-                padding: 2rem;
-                border-radius: 15px;
-                margin-bottom: 3rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                text-align: center;
-            }
-
-            .course-category {
-                margin-bottom: 4rem;
-            }
-
-            .category-title {
-                color: rgb(94, 180, 174);
-                font-size: 2rem;
-                margin-bottom: 2rem;
-                text-align: center;
-                padding: 1rem 0;
-                background: linear-gradient(135deg, #e7f5f34d, #e7f5f3);
-                border-radius: 10px;
-            }
-
-            .course-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, 350px);
-                gap: 1rem;
-                margin: 2rem 0;
-                justify-content: center;
-            }
-
-            .course-card {
-                background: white;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-                transition: transform 0.3s ease;
-            }
-
-            .course-card:hover {
-                transform: translateY(-5px);
-            }
-
-            .course-image {
-                height: 200px;
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 3rem;
-                overflow: hidden;
-                position: relative;
-            }
-
-            .course-image img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-
-            .course-content {
-                padding: 1.5rem;
-            }
-
-            .course-content h4 {
-                color: rgb(94, 180, 174);
-                margin-bottom: 1rem;
-                font-size: 1.3rem;
-            }
-
-            .course-details {
-                display: flex;
-                gap: 0.5rem;
-                margin-bottom: 1rem;
-                flex-wrap: wrap;
-            }
-
-            .detail-item {
-                background: linear-gradient(45deg, #ff6b35, #f7931e);
-                color: white;
-                padding: 0.2rem 0.8rem;
-                border-radius: 12px;
-                font-size: 0.8rem;
-                font-weight: 500;
-            }
-
-            .course-content p {
-                color: #666;
-                line-height: 1.5;
-                margin-bottom: 1rem;
-            }
-
-            .course-objectives {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            .course-objectives li {
-                margin-bottom: 0.5rem;
-                padding-left: 1.5rem;
-                position: relative;
-                font-size: 0.9rem;
-                color: #555;
-            }
-
-            .course-objectives li::before {
-                content: "✓  ";
-                position: sticky;
-                left: 0;
-                color: rgb(94, 180, 174);
-                font-weight: bold;
-            }
-
-            /* Competition styles */
-            .competition-intro {
-                background: white;
-                padding: 2rem;
-                border-radius: 15px;
-                margin-bottom: 3rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                text-align: center;
-            }
-
-            .competition-types {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                gap: 2rem;
-                margin: 3rem 0;
-            }
-
-            .competition-card {
-                background: white;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-                transition: transform 0.3s ease;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .competition-card:hover {
-                transform: translateY(-5px);
-            }
-
-            .competition-header {
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                color: white;
-                padding: 1.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .competition-header h3 {
-                margin: 0;
-                font-size: 1.3rem;
-            }
-
-            .competition-frequency {
-                background: rgba(255, 255, 255, 0.2);
-                padding: 0.3rem 0.8rem;
-                border-radius: 15px;
-                font-size: 0.8rem;
-                font-weight: 500;
-            }
-
-            .competition-content {
-                padding: 1.5rem;
-                flex-grow: 1;
-            }
-
-            .competition-image {
-                height: 250px;
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 3rem;
-                overflow: hidden;
-            }
-
-            .competition-image img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-
-            .competition-features {
-                list-style: none;
-                padding: 0;
-                margin: 1rem 0;
-            }
-
-            .competition-features li {
-                margin-bottom: 0.8rem;
-                padding-left: 1.5rem;
-                position: relative;
-                font-size: 0.9rem;
-            }
-
-            .competition-features li::before {
-                content: "🏆";
-                position: absolute;
-                left: 0;
-                font-size: 0.8rem;
-            }
-
-            .next-event,
-            .results-highlight {
-                background: #f8f9fa;
-                padding: 1rem;
-                border-radius: 8px;
-                margin-top: 1rem;
-                border-left: 4px solid #ff6b35;
-            }
-
-            .competition-cta {
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                color: white;
-                padding: 3rem;
-                border-radius: 15px;
-                text-align: center;
-                margin-top: 3rem;
-            }
-
-            .competition-cta h3 {
-                margin-bottom: 1rem;
-                font-size: 1.8rem;
-            }
-
-            /* Galops styles */
-            .galops-intro {
-                background: white;
-                padding: 2rem;
-                border-radius: 15px;
-                margin-bottom: 3rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                text-align: center;
-            }
-
-            .galops-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                gap: 2rem;
-                margin: 3rem 0;
-            }
-
-            .galop-level {
-                background: white;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-                transition: transform 0.3s ease;
-            }
-
-            .galop-level:hover {
-                transform: translateY(-5px);
-            }
-
-            .galop-header {
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                color: white;
-                padding: 1.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .galop-header h3 {
-                margin: 0;
-                font-size: 1.3rem;
-            }
-
-            .galop-badge {
-                padding: 0.3rem 0.8rem;
-                border-radius: 15px;
-                font-size: 0.8rem;
-                font-weight: 600;
-            }
-
-            .galop-badge.beginner {
-                background: #28a745;
-                color: white;
-            }
-
-            .galop-badge.intermediate {
-                background: #ffc107;
-                color: #333;
-            }
-
-            .galop-badge.advanced {
-                background: #dc3545;
-                color: white;
-            }
-
-            .galop-content {
-                padding: 1.5rem;
-            }
-
-            .galop-skills h4 {
-                color: rgb(94, 180, 174);
-                margin-bottom: 1rem;
-            }
-
-            .galop-skills ul {
-                list-style: none;
-                padding: 0;
-                margin-bottom: 1.5rem;
-            }
-
-            .galop-skills li {
-                margin-bottom: 0.8rem;
-                padding-left: 1.5rem;
-                position: relative;
-                font-size: 0.9rem;
-            }
-
-            .galop-skills li::before {
-                content: "📚";
-                position: absolute;
-                left: 0;
-                font-size: 0.8rem;
-            }
-
-            .galop-exam {
-                background: #f8f9fa;
-                padding: 1rem;
-                border-radius: 8px;
-                font-size: 0.9rem;
-                line-height: 1.4;
-            }
-
-            /* Exam schedule */
-            .exam-schedule {
-                background: white;
-                padding: 2.5rem;
-                border-radius: 15px;
-                margin: 3rem 0;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            }
-
-            .exam-schedule h3 {
-                color: rgb(94, 180, 174);
-                text-align: center;
-                margin-bottom: 2rem;
-                font-size: 1.8rem;
-            }
-
-            .schedule-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 2rem;
-            }
-
-            .exam-date {
-                background: #f8f9fa;
-                border-radius: 12px;
-                padding: 1.5rem;
-                display: flex;
-                gap: 1rem;
-                transition: transform 0.3s ease;
-            }
-
-            .exam-date:hover {
-                transform: translateY(-3px);
-            }
-
-            .date-info {
-                background: linear-gradient(45deg, #ff6b35, #f7931e);
-                color: white;
-                padding: 1rem;
-                border-radius: 10px;
-                text-align: center;
-                min-width: 80px;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .date-info .month {
-                font-size: 0.8rem;
-                font-weight: 600;
-            }
-
-            .date-info .day {
-                font-size: 1.5rem;
-                font-weight: bold;
-            }
-
-            .exam-details h4 {
-                color: rgb(94, 180, 174);
-                margin-bottom: 0.5rem;
-            }
-
-            .exam-details p {
-                color: #666;
-                margin-bottom: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .exam-register {
-                background: rgb(94, 180, 174);
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 15px;
-                text-decoration: none;
-                font-size: 0.8rem;
-                font-weight: 500;
-                transition: background 0.3s ease;
-            }
-
-            .exam-register:hover {
-                background: rgb(94, 180, 174);
-            }
-
-            .exam-register.disabled {
-                background: #ccc;
-                cursor: not-allowed;
-            }
-
-            /* Exam preparation */
-            .exam-preparation {
-                background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-                padding: 2.5rem;
-                border-radius: 15px;
-                margin-top: 3rem;
-            }
-
-            .exam-preparation h3 {
-                color: rgb(94, 180, 174);
-                text-align: center;
-                margin-bottom: 2rem;
-            }
-
-            .preparation-info {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-
-            .preparation-list {
-                list-style: none;
-                padding: 0;
-                margin: 1.5rem 0;
-            }
-
-            .preparation-list li {
-                margin-bottom: 1rem;
-                padding-left: 1.5rem;
-                position: relative;
-                line-height: 1.5;
-            }
-
-            .preparation-list li::before {
-                content: "🎯";
-                position: absolute;
-                left: 0;
-                font-size: 0.9rem;
-            }
-
-            .preparation-cta {
-                text-align: center;
-                margin-top: 2rem;
-            }
-
-            /* Stages styles */
-            .stages-intro {
-                background: white;
-                padding: 2rem;
-                border-radius: 15px;
-                margin-bottom: 3rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                text-align: center;
-            }
-
-            .stages-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                gap: 2rem;
-                margin: 3rem 0;
-            }
-
-            .stage-card {
-                background: white;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-                transition: transform 0.3s ease;
-            }
-
-            .stage-card:hover {
-                transform: translateY(-5px);
-            }
-
-            .stage-image {
-                height: 120px;
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 3rem;
-            }
-
-            .stage-content {
-                padding: 1.5rem;
-            }
-
-            .stage-content h3 {
-                color: rgb(94, 180, 174);
-                margin-bottom: 1rem;
-                font-size: 1.3rem;
-            }
-
-            .stage-program {
-                list-style: none;
-                padding: 0;
-                margin: 1rem 0;
-            }
-
-            .stage-program li {
-                margin-bottom: 0.5rem;
-                padding-left: 1.5rem;
-                position: relative;
-                font-size: 0.9rem;
-            }
-
-            .stage-program li::before {
-                content: "•";
-                position: absolute;
-                left: 0;
-                color: #4a7c59;
-                font-weight: bold;
-            }
-
-            .stage-price {
-                background: #f8f9fa;
-                padding: 1rem;
-                border-radius: 8px;
-                text-align: center;
-                margin-top: 1rem;
-                border-left: 4px solid #ff6b35;
-            }
-
-            .stage-price strong {
-                color: rgb(94, 180, 174);
-                font-size: 1.1rem;
-            }
-
-            /* Stages calendar */
-            .stages-calendar {
-                background: white;
-                padding: 2.5rem;
-                border-radius: 15px;
-                margin: 3rem 0;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            }
-
-            .stages-calendar h3 {
-                color: rgb(94, 180, 174);
-                text-align: center;
-                margin-bottom: 2rem;
-                font-size: 1.8rem;
-            }
-
-            .calendar-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 2rem;
-            }
-
-            .vacation-period {
-                background: #f8f9fa;
-                padding: 1.5rem;
-                border-radius: 12px;
-                transition: transform 0.3s ease;
-            }
-
-            .vacation-period:hover {
-                transform: translateY(-3px);
-            }
-
-            .vacation-period h4 {
-                color: rgb(94, 180, 174);
-                margin-bottom: 0.5rem;
-            }
-
-            .dates {
-                color: #666;
-                margin-bottom: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .available-stages {
-                display: flex;
-                gap: 0.5rem;
-                margin-bottom: 1rem;
-                flex-wrap: wrap;
-            }
-
-            .stage-tag {
-                background: linear-gradient(45deg, #ff6b35, #f7931e);
-                color: white;
-                padding: 0.2rem 0.6rem;
-                border-radius: 10px;
-                font-size: 0.7rem;
-                font-weight: 500;
-            }
-
-            .booking-status {
-                padding: 0.5rem 1rem;
-                border-radius: 15px;
-                font-size: 0.8rem;
-                font-weight: 600;
-                text-align: center;
-            }
-
-            .booking-status.available {
-                background: #28a745;
-                color: white;
-            }
-
-            .booking-status.coming-soon {
-                background: #ffc107;
-                color: #333;
-            }
-
-            .stages-cta {
-                background: linear-gradient(
-                    45deg,
-                    rgb(94, 180, 174),
-                    rgb(69, 144, 150)
-                );
-                color: white;
-                padding: 3rem;
-                border-radius: 15px;
-                text-align: center;
-                margin-top: 3rem;
-            }
-
-            .stages-cta h3 {
-                margin-bottom: 1rem;
-                font-size: 1.8rem;
-            }
         </style>
     </head>
     <body>
@@ -757,7 +75,7 @@
                             <a href="../pages/activites.html">Les activités</a>
                             <div class="dropdown">
                                 <a href="../pages/activites.html#cours"
-                                    >Nos Cours</a
+                                    >Cours d'Équitation</a
                                 >
                                 <a href="../pages/activites.html#competition"
                                     >Competition</a
@@ -766,7 +84,7 @@
                                     >Examens et Galops</a
                                 >
                                 <a href="../pages/activites.html#activites"
-                                    >Activités</a
+                                    >Stages et Sorties</a
                                 >
                             </div>
                         </li>
@@ -864,12 +182,22 @@
                             niveaux. Chaque cavalier évolue à son rythme dans
                             une ambiance bienveillante et sécurisée.
                         </p>
+                        <div class="preparation-cta">
+                            <a href="../pages/planning.html" class="cta-primary"
+                                >Les Forfaits</a
+                            >
+                            <a
+                                href="../pages/infos.html#fonctionnement"
+                                class="cta-primary"
+                                >Les Fonctionnement des cours</a
+                            >
+                        </div>
                     </div>
 
                     <!-- Cours Baby Poney -->
                     <div class="course-category">
                         <h3 class="category-title">
-                            🦄 Pour les plus petits (3-6 ans)
+                            🦄 Pour les plus petits (3-4 ans)
                         </h3>
 
                         <div class="course-grid">
@@ -889,7 +217,6 @@
                                         <span class="detail-item"
                                             >⏰ 45 minutes</span
                                         >
-                                        <span class="detail-item">🐴 Baby</span>
                                     </div>
                                     <p>
                                         Première approche du poney par le jeu.
@@ -903,25 +230,62 @@
                                         <li>Équilibre et motricité</li>
                                         <li>Jeux éducatifs et goûter</li>
                                     </ul>
-                                    <p>
-                                        Les dates pour l'année 2025-2026 seront
-                                        annoncées prochainement, et les
-                                        inscriptions ouvriront en septembre
-                                        2025.
-                                    </p>
                                 </div>
                             </div>
+                            <div class="course-card eveil-details-card">
+                                <div class="eveil-details-header">
+                                    <span class="eveil-details-icon">📅</span>
+                                    <h4>Dates & Fonctionnement</h4>
+                                </div>
+                                <div class="course-content">
+                                    <div class="eveil-details-section">
+                                        <h5>📆 Dates des séances 2025-2026</h5>
+                                        <ul class="eveil-details-dates-list">
+                                            <li>Dimanche 21 septembre 2025</li>
+                                            <li>Dimanche 12 octobre 2025</li>
+                                            <li>Dimanche 9 novembre 2025</li>
+                                            <li>Dimanche 7 décembre 2025</li>
+                                            <li>Dimanche 25 janvier 2026</li>
+                                            <li>Dimanche 8 février 2026</li>
+                                            <li>Dimanche 15 mars 2026</li>
+                                        </ul>
+                                    </div>
 
+                                    <div class="eveil-details-section">
+                                        <h5>ℹ️ Informations pratiques</h5>
+                                        <p class="eveil-details-text">
+                                            <strong>Tarifs :</strong> 130€ + 29€
+                                            de license <br />
+
+                                            <strong>Inscription :</strong>
+                                            Ouvertes, sur votre espace en ligne.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cours Enfants -->
+                    <div class="course-category">
+                        <h3 class="category-title">
+                            🐎 Cours Poney (4-12 ans)
+                        </h3>
+
+                        <div class="course-grid">
                             <div class="course-card">
                                 <div class="course-image">
                                     <img
-                                        src="../images/Images-illustrations/chevaux-illustration.avif"
+                                        src="../images/Images-illustrations/eveil-photo.jpg"
                                         alt=""
                                     />
                                 </div>
                                 <div class="course-content">
                                     <h4>Baby Poney</h4>
                                     <div class="course-details">
+                                        <span class="detail-item"
+                                            >🐴 6 cavaliers</span
+                                        >
                                         <span class="detail-item"
                                             >👶 4 à 6 ans</span
                                         >
@@ -957,16 +321,6 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Cours Enfants -->
-                    <div class="course-category">
-                        <h3 class="category-title">
-                            🐎 Cours Poney (7-12 ans)
-                        </h3>
-
-                        <div class="course-grid">
                             <div class="course-card">
                                 <div class="course-image">
                                     <img
@@ -978,13 +332,16 @@
                                     <h4>Débutant Poney</h4>
                                     <div class="course-details">
                                         <span class="detail-item"
+                                            >🐴 8 cavaliers</span
+                                        >
+                                        <span class="detail-item"
                                             >⏰ 45 minutes</span
                                         >
                                         <span class="detail-item"
-                                            >🐎 Débutants</span
+                                            >🏆 Débutants</span
                                         >
                                         <span class="detail-item"
-                                            >🐴 6 cavaliers</span
+                                            >🐴 8 cavaliers</span
                                         >
                                     </div>
                                     <p>
@@ -1013,9 +370,12 @@
                                 <div class="course-content">
                                     <h4>Le Forfait 1h</h4>
                                     <div class="course-details">
+                                        <span class="detail-item"
+                                            >🐴 10 cavaliers</span
+                                        >
                                         <span class="detail-item">⏰ 1h</span>
                                         <span class="detail-item"
-                                            >🐴 Galop de Bronze à Or</span
+                                            >🏆 Galop de Bronze à Or</span
                                         >
                                     </div>
                                     <p>
@@ -1030,33 +390,6 @@
                                         <li>Figures de manège</li>
                                         <li>Premiers sauts</li>
                                         <li>Autonomie complète</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="course-card">
-                                <div class="course-image">
-                                    <img
-                                        src="../images/Images-illustrations/manege-illustration.avif"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="course-content">
-                                    <h4>Compétition Jeunes</h4>
-                                    <div class="course-details">
-                                        <span class="detail-item">⏰ 1h</span>
-                                        <span class="detail-item"
-                                            >🐴 Galop d'Or</span
-                                        >
-                                    </div>
-                                    <p>
-                                        Pour les premières compétitions ou pour
-                                        les compétiteurs aguéris.
-                                    </p>
-                                    <ul class="course-objectives">
-                                        <li>Technique avancée</li>
-                                        <li>Préparation concours</li>
-                                        <li>Préparation au passage à cheval</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1081,13 +414,13 @@
                                     <h4>Le Forfait 1h</h4>
                                     <div class="course-details">
                                         <span class="detail-item"
-                                            >👥 11 cavaliers max</span
+                                            >🐴 10 cavaliers max</span
                                         >
                                         <span class="detail-item"
                                             >⏰ 1 heure</span
                                         >
                                         <span class="detail-item"
-                                            >🐴 Tous niveaux</span
+                                            >🏆 Tous niveaux</span
                                         >
                                     </div>
                                     <p>
@@ -1109,7 +442,7 @@
                             <div class="course-card">
                                 <div class="course-image">
                                     <img
-                                        src="../images/Images-illustrations/manege-illustration.avif"
+                                        src="../images/Images-illustrations/WhatsApp Image 2025-10-29 at 23.13.55.jpeg"
                                         alt=""
                                     />
                                 </div>
@@ -1117,11 +450,11 @@
                                     <h4>Perfectionnement</h4>
                                     <div class="course-details">
                                         <span class="detail-item"
-                                            >👥 11 cavaliers max</span
+                                            >🐴 10 cavaliers max</span
                                         >
                                         <span class="detail-item">⏰ 1h15</span>
                                         <span class="detail-item"
-                                            >🐴 Galop 6 & 7</span
+                                            >🏆 Galop 6 & 7</span
                                         >
                                     </div>
                                     <p>
@@ -1151,13 +484,13 @@
                                     <h4>Reprises de dressage</h4>
                                     <div class="course-details">
                                         <span class="detail-item"
-                                            >👥 11 cavaliers max</span
+                                            >🐴 10 cavaliers max</span
                                         >
                                         <span class="detail-item"
                                             >⏰ 1h ou 1h30</span
                                         >
                                         <span class="detail-item"
-                                            >🐴 Galops 2 à 7</span
+                                            >🏆 Galops 2 à 7</span
                                         >
                                     </div>
                                     <p>
@@ -1181,7 +514,7 @@
             <!-- Compétitions -->
             <section id="competition" class="content-section bg-light">
                 <div class="container">
-                    <h2 class="section-title">Compétitions</h2>
+                    <h2 class="section-title">Compétition</h2>
 
                     <div class="competition-intro">
                         <p>
@@ -1194,7 +527,7 @@
                     <div class="competition-types">
                         <div class="competition-card">
                             <div class="competition-header">
-                                <h3>🏆 Équipe Poney</h3>
+                                <h3>🏆 Équipes Poney</h3>
                             </div>
                             <div class="competition-content">
                                 <p>
@@ -1219,7 +552,7 @@
                             </div>
                             <div class="competition-image">
                                 <img
-                                    src="../images/Images-illustrations/lemans.jpeg"
+                                    src="../images/Images-illustrations/compet-poney.jpg"
                                     alt=""
                                 />
                             </div>
@@ -1290,7 +623,7 @@
             <!-- Examens Galops -->
             <section id="galops" class="content-section">
                 <div class="container">
-                    <h2 class="section-title">Examens des Galops FFE</h2>
+                    <h2 class="section-title">Examens et Galops FFE</h2>
 
                     <div class="galops-intro">
                         <p>
@@ -1513,12 +846,15 @@
                     2FED1B49-16FB-45CE-97C6-9D5D8B5D36DF.jpeg,
                     316FB0AE-33D2-423C-8F77-A79239C16F8D.jpeg,
                     5B534776-49E8-44CB-8F45-DB560DD110B7.jpeg,
+                    WhatsApp Image 2025-10-29 at 23.07.31.jpeg,
                     6F361C0E-96BA-4ACA-B1CF-BE307A707FA3.jpeg,
                     716FFD1A-9DAB-4C9B-B69D-3A5C63EFE19C.jpeg,
+                    WhatsApp Image 2025-10-29 at 23.04.36.jpeg,
                     72E273B8-51EB-438E-9854-8B7356E8FE29.jpeg,
                     74E1B71E-0E50-48A1-B243-6A8F087A311F.jpeg,
                     7ADB5A57-7646-4C77-922C-FDA48C420C7D.jpeg,
                     90BFDB09-0FE9-44CA-8016-85CC1A1160CB.jpeg,
+                    WhatsApp Image 2025-10-29 at 23.13.55.jpeg,
                     95756EC0-387D-4D46-8D8A-414A95499F30.jpeg,
                     A4B43F1B-44A0-42E5-8C0A-F4F979CC35E6.jpeg,
                     activ-hero.jpeg,activites-illustration.avif,
@@ -1543,6 +879,7 @@
                     manege-illustration.avif,
                     paddocks-illustration.avif,
                     paddocks.jpeg,
+                    eveil-photo.jpg,
                     sorties-act.jpeg"
             >
                 <button class="gallery-nav prev">‹</button>
@@ -1552,7 +889,7 @@
             <!-- Stages -->
             <section id="activites" class="content-section bg-light">
                 <div class="container">
-                    <h2 class="section-title">Autres Activités</h2>
+                    <h2 class="section-title">Activités</h2>
 
                     <div class="stages-intro">
                         <p>
@@ -1790,8 +1127,16 @@
                         >
                     </p>
                     <p>
-                        <a href="https://cloud6.kavalog.fr/SHEVA/">
-                            Mon compte</a
+                        <a
+                            href="../PDF_docs/charte_de_la_laicite signee 2024.pdf"
+                            >Charte de la Laïcité</a
+                        >
+                    </p>
+                    <p>
+                        <a
+                            href="../PDF_docs/Reglement_interieur_SHEVA_2025_v12.pdf"
+                        >
+                            Réglement Intérieur</a
                         >
                     </p>
                 </div>

@@ -1994,6 +1994,7 @@ body {
 .social-links a {
     display: flex;
     align-items: center;
+
     gap: 8px;
     color: #333; /* Ajustez la couleur selon votre thème */
     text-decoration: none;

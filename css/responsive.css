@@ -576,6 +576,13 @@ body {
         order: 1;
         font-size: 0.9rem;
     }
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        align-items: center;
+    }
 }
 
 /* ===== PRÉFÉRENCES D'ACCESSIBILITÉ ===== */

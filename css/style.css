@@ -1498,18 +1498,63 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: rgb(94, 180, 174);
+    font-weight: 600;
+}
+
+/* Tabs de filtrage */
+.news-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgb(94, 180, 174);
+    background: white;
+    color: rgb(94, 180, 174);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.tab-btn:hover {
+    background: rgb(94, 180, 174);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background: rgb(94, 180, 174);
+    color: white;
+}
+
+/* Grid responsive */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
+/* News Cards classiques */
 .news-card {
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .news-card:hover {
@@ -1525,15 +1570,24 @@ body {
     color: white;
     font-size: 3rem;
 }
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .news-content {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .news-date {
     color: #666;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
+    display: block;
 }
 
 .news-title {
@@ -1546,6 +1600,86 @@ body {
 .news-excerpt {
     color: #666;
     line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.news-link {
+    color: rgb(94, 180, 174);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: gap 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.news-link:hover {
+    gap: 0.5rem;
+    text-decoration: underline;
+}
+
+/* Instagram Cards */
+.instagram-card {
+    padding: 0;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.instagram-card .instagram-media {
+    margin: 0 !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+}
+
+/* Footer avec bouton Instagram */
+.news-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.instagram-follow-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, rgb(94, 180, 174), rgb(69, 144, 150));
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(94, 180, 174, 0.3);
+}
+
+.instagram-follow-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(94, 180, 174, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .news-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .news-tabs {
+        gap: 0.5rem;
+    }
+
+    .tab-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* ===== PREVIEW SECTION ===== */

@@ -507,6 +507,56 @@ body {
         flex-direction: column;
     }
 
+    .team-info {
+        text-align: center;
+    }
+
+    .team-name {
+        text-align: center;
+    }
+
+    .team-role {
+        text-align: center;
+    }
+
+    .team-specs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .team-spec {
+        display: inline-block;
+    }
+
+    .team-bio {
+        text-align: center;
+    }
+
+    .ca-content {
+        text-align: center;
+    }
+
+    .ca-content h3 {
+        text-align: center;
+    }
+
+    .ca-role {
+        text-align: center;
+    }
+
+    .ca-specs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .ca-content p {
+        text-align: center;
+    }
+
     /* Planning mobile */
     .schedule-container {
         grid-template-columns: 1fr;

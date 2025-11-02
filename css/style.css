@@ -4162,6 +4162,7 @@ body {
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
     animation: fadeIn 0.3s ease;
+    overflow-y: auto;
 }
 
 .popup-container {
@@ -5257,7 +5258,7 @@ body {
     margin-bottom: 0.5rem;
     padding-left: 1.5rem;
     position: relative;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #555;
 }
 
@@ -5444,7 +5445,7 @@ body {
     margin-bottom: 0.8rem;
     padding-left: 1.5rem;
     position: relative;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .competition-features li::before {

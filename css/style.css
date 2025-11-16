@@ -1479,18 +1479,6 @@ body {
     background: #ffffff;
 }
 
-/* Responsive pour les petits écrans */
-@media (max-width: 768px) {
-    .labels-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .label-badge:hover {
-        transform: translateY(-2px); /* Animation plus subtile sur mobile */
-    }
-}
-
 /* ===== NEWS SECTION ===== */
 .news-section {
     background: white;
@@ -1604,6 +1592,12 @@ body {
     flex-grow: 1;
 }
 
+.news-content li {
+    color: #666;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
 .news-link {
     color: rgb(94, 180, 174);
     font-weight: 600;
@@ -1691,6 +1685,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    align-items: center;
 }
 
 .preview-card {
@@ -2066,6 +2061,30 @@ body {
     z-index: 1;
     text-align: center;
     position: relative;
+}
+
+.hero-logo {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
+
+.hero-logo:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .hero-logo {
+        max-width: 200px;
+    }
+
+    .page-hero {
+        padding: 3rem 0;
+    }
 }
 
 /* Quand il y a une image en style inline, on la combine avec le gradient */

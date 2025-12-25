@@ -663,7 +663,12 @@
                             en cas de problèmes. <br>
                             
                         </p>
+                        <button class="btn-notices" onclick="openNoticesPopup()">
+                            <span class="btn-notices-icon">📋</span>
+                            Consulter les notices d'inscription
+                        </button>
                     </div>
+                    
                     <div class="parking-info">
                             <h4>⚠️ Informations inscriptions</h4>
                             <p>
@@ -1506,7 +1511,7 @@
                                         pour plus de détails :
                                         <a
                                             class="preview-link"
-                                            href="../PDF_docs/espace_per_reprises_activités.pdf"
+                                            href="../PDF_docs/Notice_inscriptions_recup_activites.pdf"
                                             >Notice d'Inscription</a
                                         >
                                     </p>
@@ -1993,6 +1998,125 @@
                             ></div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== BOUTON DÉCLENCHEUR ===== -->
+        <!-- Place ce bouton où tu veux sur ta page -->
+        
+
+
+        <!-- ===== POPUP NOTICES D'INSCRIPTION ===== -->
+        <div id="noticesPopup" class="notices-popup-overlay">
+            <div class="notices-popup-container">
+                <!-- Header -->
+                <div class="notices-popup-header">
+                    <div class="notices-popup-icon">📄</div>
+                    <h2 class="notices-popup-title">Notices d'inscription</h2>
+                    <p class="notices-popup-subtitle">Tous les documents pour bien préparer votre rentrée équestre</p>
+                    <button class="notices-close-btn" onclick="closeNoticesPopup()">&times;</button>
+                </div>
+
+                <!-- Contenu -->
+                <div class="notices-popup-content">
+                    <!-- Introduction -->
+                    <div class="notices-intro">
+                        <p>
+                            Retrouvez ici toutes les <strong>notices d'inscription</strong> nécessaires pour rejoindre la SHEVA. 
+                            Ces documents contiennent les informations essentielles sur les modalités d'inscription et l'utilisation de l'espace en ligne.
+                        </p>
+                        <p class="notices-tip">
+                            💡 <em>Nous vous conseillons de lire attentivement ces documents avant de procéder à votre inscription.</em>
+                        </p>
+                    </div>
+
+                    <!-- Liste des notices -->
+                    <div class="notices-list">
+                        <!-- Notice principale -->
+                        <div class="notice-item notice-main">
+                            <div class="notice-icon">📑</div>
+                            <div class="notice-info">
+                                <h4>Notice d'inscription nouveaux adhérents</h4>
+                                <p>Notice complète pour vous guider dans votre inscriptions si vous souhaitez rejoindre la Sheva.</p>
+                            </div>
+                            <a href="../PDF_docs/notice-nouveaux.pdf" target="_blank" class="notice-download-btn">
+                                <span class="download-icon">⬇️</span>
+                                Télécharger
+                            </a>
+                        </div>
+
+                        <!-- Règlement intérieur -->
+                        <div class="notice-item">
+                            <div class="notice-icon">📜</div>
+                            <div class="notice-info">
+                                <h4>Notice de réinscription annuelle</h4>
+                                <p>Pour vous réinscrire pour une nouvelle saison, suivez toutes les indications de la notice.</p>
+                            </div>
+                            <a href="../PDF_docs/Notice Reinscription Annuelle.pdf" target="_blank" class="notice-download-btn">
+                                <span class="download-icon">⬇️</span>
+                                Télécharger
+                            </a>
+                        </div>
+
+                        <!-- Fiche sanitaire -->
+                        <div class="notice-item">
+                            <div class="notice-icon">🏥</div>
+                            <div class="notice-info">
+                                <h4>Notice d'inscription trimestrielle</h4>
+                                <p>Trouvez ici les informations pour vous inscrire à un forfait trimestriel.</p>
+                            </div>
+                            <a href="../PDF_docs/notice_inscriptions_trimestrielles.pdf" target="_blank" class="notice-download-btn">
+                                <span class="download-icon">⬇️</span>
+                                Télécharger
+                            </a>
+                        </div>
+
+                        <!-- Autorisation parentale (optionnel) -->
+                        <div class="notice-item">
+                            <div class="notice-icon">🎠</div>
+                            <div class="notice-info">
+                                <h4>Notice d'inscription aux séances d'essai</h4>
+                                <p>Si vous souhaitez nous rejoindre, les séances d'essai sont fortement conseillées. Voici la notice pour vous y inscrire.</p>
+                            </div>
+                            <a href="../PDF_docs/notice_seance_essai.pdf" target="_blank" class="notice-download-btn">
+                                <span class="download-icon">⬇️</span>
+                                Télécharger
+                            </a>
+                        </div>
+
+                        <div class="notice-item">
+                            <div class="notice-icon">🏕️</div>
+                            <div class="notice-info">
+                                <h4>Notice d'inscription récupérations et activités</h4>
+                                <p>Consultez cette notice pour savoir comment gérer vos récupérations et pour vous inscrire à nos nombreuses activités.</p>
+                            </div>
+                            <a href="../PDF_docs/Notice_inscriptions_recup_activites.pdf" target="_blank" class="notice-download-btn">
+                                <span class="download-icon">⬇️</span>
+                                Télécharger
+                            </a>
+                        </div>
+
+                        <div class="notice-item">
+                            <div class="notice-icon">🏝️</div>
+                            <div class="notice-info">
+                                <h4>Notice d'inscription aux reprises de vacances</h4>
+                                <p>Lors des vacances (Noël, Hiver et Printemps), le planning des reprises est légèrement modifié. Consultez cette notice pour plus d'informations sur les inscriptions aux reprises des vacances.</p>
+                            </div>
+                            <a href="../PDF_docs/Notice_inscr_reprises_vac.pdf" target="_blank" class="notice-download-btn">
+                                <span class="download-icon">⬇️</span>
+                                Télécharger
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer avec infos complémentaires -->
+                    <div class="notices-footer">
+                        <div class="notices-help">
+                            <span class="help-icon">❓</span>
+                            <p>Une question sur l'inscription ? Contactez-nous à <a href="mailto:sheva@sheva.fr">sheva@sheva.fr</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

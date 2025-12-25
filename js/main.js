@@ -386,3 +386,34 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+/* ===== JAVASCRIPT POPUP NOTICES D'INSCRIPTION ===== */
+
+// Ouvrir la popup
+function openNoticesPopup() {
+    const popup = document.getElementById("noticesPopup");
+    popup.classList.add("active");
+    document.body.style.overflow = "hidden"; // Empêche le scroll du body
+}
+
+// Fermer la popup
+function closeNoticesPopup() {
+    const popup = document.getElementById("noticesPopup");
+    popup.classList.remove("active");
+    document.body.style.overflow = ""; // Réactive le scroll
+}
+
+// Fermer avec la touche Escape
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeNoticesPopup();
+    }
+});
+
+// Fermer en cliquant à l'extérieur
+document.addEventListener("click", function (event) {
+    const popup = document.getElementById("noticesPopup");
+    if (event.target === popup) {
+        closeNoticesPopup();
+    }
+});

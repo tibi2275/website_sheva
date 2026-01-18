@@ -50,7 +50,7 @@
 .equicoaching-content h3 {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #1a472a;
+    color: rgb(94, 180, 174);
     margin: 0 0 0.75rem 0;
     position: relative;
     padding-bottom: 0.75rem;
@@ -63,7 +63,7 @@
     left: 0;
     width: 45px;
     height: 3px;
-    background: linear-gradient(90deg, #1a472a, #2d6a4f);
+    background: linear-gradient(90deg, rgb(94, 180, 174), rgb(45, 106, 79));
     border-radius: 2px;
 }
 
@@ -80,7 +80,11 @@
     align-items: center;
     gap: 0.6rem;
     padding: 0.85rem 1.5rem;
-    background: linear-gradient(135deg, #1a472a, #2d6a4f);
+    background: linear-gradient(
+        135deg,
+        rgb(255, 107, 107) 0%,
+        rgb(255, 94, 77) 100%
+    );
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
@@ -92,7 +96,11 @@
 }
 
 .equicoaching-btn:hover {
-    background: linear-gradient(135deg, #15392a, #1a472a);
+    background: linear-gradient(
+        135deg,
+        rgb(255, 107, 107) 0%,
+        rgb(255, 153, 102) 100%
+    );
     box-shadow: 0 5px 18px rgba(26, 71, 42, 0.35);
 }
 
@@ -150,8 +158,8 @@
     position: relative;
     height: 45vh;
     min-height: 350px;
-    background: url("../images/Images-illustrations/equicoaching-hero.jpg")
-        center center / cover no-repeat;
+    background: url("../images/Images-illustrations/chevaux-hero.jpeg") center
+        center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,8 +171,8 @@
     inset: 0;
     background: linear-gradient(
         135deg,
-        rgba(26, 71, 42, 0.85),
-        rgba(45, 106, 79, 0.75)
+        rgba(239, 239, 239, 0.85),
+        rgba(104, 104, 104, 0.75)
     );
 }
 
@@ -205,7 +213,7 @@
 
 .intro-text h2 {
     font-size: 2rem;
-    color: #1a472a;
+    color: rgb(94, 180, 174);
     margin: 0 0 1.5rem 0;
     position: relative;
     padding-bottom: 1rem;
@@ -218,7 +226,11 @@
     left: 0;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #1a472a, #2d6a4f);
+    background: linear-gradient(
+        135deg,
+        rgb(94, 180, 174) 0%,
+        rgb(69, 144, 150) 100%
+    );
     border-radius: 2px;
 }
 
@@ -289,7 +301,11 @@
 
 .why-feature h3 {
     font-size: 1.1rem;
-    color: #1a472a;
+    background: linear-gradient(
+        135deg,
+        rgb(255, 107, 107) 0%,
+        rgb(255, 153, 102) 100%
+    );
     margin: 0 0 0.75rem 0;
 }
 
@@ -356,7 +372,11 @@
 
 .offer-tag {
     display: inline-block;
-    background: linear-gradient(135deg, #1a472a, #2d6a4f);
+    background: linear-gradient(
+        135deg,
+        rgb(255, 107, 107) 0%,
+        rgb(255, 153, 102) 100%
+    );
     color: #fff;
     font-size: 0.75rem;
     font-weight: 600;
@@ -367,7 +387,7 @@
 
 .offer-content h3 {
     font-size: 1.25rem;
-    color: #1a472a;
+    color: rgb(94, 180, 174);
     margin: 0 0 0.5rem 0;
 }
 
@@ -380,7 +400,7 @@
 
 .offer-duration {
     display: inline-block;
-    color: #1a472a;
+    color: rgb(94, 180, 174);
     font-size: 0.85rem;
     font-weight: 600;
     padding: 0.25rem 0;
@@ -390,7 +410,7 @@
 
 /* Offre entreprise */
 .enterprise-offer {
-    background: linear-gradient(135deg, #1a472a, #2d6a4f);
+    background: linear-gradient(45deg, rgb(94, 180, 174), rgb(69, 144, 150));
     border-radius: 12px;
     padding: 2.5rem;
     color: #ffffff;
@@ -486,7 +506,7 @@
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background: #1a472a;
+    background: rgb(94, 180, 174);
     color: #ffffff;
     text-decoration: none;
     border-radius: 6px;
@@ -495,7 +515,7 @@
 }
 
 .social-link:hover {
-    background: #15392a;
+    background: #fd4f4f;
 }
 
 /* ----------------------------------------
@@ -619,7 +639,7 @@
 
 .cta-box h3 {
     font-size: 1.75rem;
-    color: #1a472a;
+    color: rgb(94, 180, 174);
     margin: 0 0 0.75rem 0;
 }
 
@@ -638,7 +658,11 @@
 .equicoaching-cta .cta-primary {
     display: inline-block;
     padding: 0.9rem 2rem;
-    background: linear-gradient(135deg, #1a472a, #2d6a4f);
+    background: linear-gradient(
+        135deg,
+        rgb(94, 180, 174) 0%,
+        rgb(69, 144, 150) 100%
+    );
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
@@ -648,25 +672,37 @@
 }
 
 .equicoaching-cta .cta-primary:hover {
-    background: linear-gradient(135deg, #15392a, #1a472a);
+    background: linear-gradient(
+        135deg,
+        rgb(255, 107, 107) 0%,
+        rgb(255, 94, 77) 100%
+    );
     box-shadow: 0 6px 20px rgba(26, 71, 42, 0.35);
 }
 
 .equicoaching-cta .cta-secondary {
     display: inline-block;
     padding: 0.9rem 2rem;
-    background: transparent;
-    color: #1a472a;
+    background: linear-gradient(
+        135deg,
+        rgb(94, 180, 174) 0%,
+        rgb(69, 144, 150) 100%
+    );
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     border-radius: 8px;
-    border: 2px solid #1a472a;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26, 71, 42, 0.25);
 }
 
 .equicoaching-cta .cta-secondary:hover {
-    background: #1a472a;
-    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        rgb(255, 107, 107) 0%,
+        rgb(255, 94, 77) 100%
+    );
+    box-shadow: 0 6px 20px rgba(26, 71, 42, 0.35);
 }
 
 /* ----------------------------------------

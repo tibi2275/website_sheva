@@ -1160,6 +1160,17 @@ body {
     }
 }
 
+/* Bouton compte mobile - caché par défaut sur desktop */
+.btn-account-mobile {
+    display: none;
+}
+
+/* Container header actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 @media (max-width: 480px) {
     .nav-container {
         padding: 0 1rem;
@@ -4023,7 +4034,9 @@ body {
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid #e0e0e0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .calendar-card:hover {
@@ -4296,7 +4309,9 @@ body {
     background-repeat: no-repeat;
     background-position: right 16px center;
     background-size: 0px;
-    transition: all 0.3s ease, background-size 0.2s ease;
+    transition:
+        all 0.3s ease,
+        background-size 0.2s ease;
 }
 
 .form-group input[type="number"]:valid {

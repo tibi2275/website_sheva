@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
@@ -151,13 +151,27 @@
                             </div>
                         </li>
                     </ul>
+                </nav>
+                <div class="header-actions">
+                    <!-- Bouton DESKTOP (texte complet) -->
                     <a
                         href="https://cloud6.kavalog.fr/SHEVA/"
-                        class="btn-account"
-                        >Mon compte</a
+                        class="btn-account btn-account-desktop"
                     >
-                </nav>
-                <button class="mobile-toggle" id="mobileToggle">☰</button>
+                        Mon compte
+                    </a>
+
+                    <!-- Bouton MOBILE (icône) -->
+                    <a
+                        href="https://cloud6.kavalog.fr/SHEVA/"
+                        class="btn-account-mobile"
+                        aria-label="Mon compte"
+                    >
+                        👤
+                    </a>
+
+                    <button class="mobile-toggle" id="mobileToggle">☰</button>
+                </div>
             </div>
         </header>
 

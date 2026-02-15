@@ -1980,7 +1980,13 @@
                                     class="cta-primary"
                                     >Découvrez nos retraités</a
                                 >
+                                 <button class="btn-notices" onclick="openNoticesPopup()">
+                                <span class="btn-notices-icon">📋</span>
+                                Consultez les documents de l'association
+                                </button>
                             </div>
+                            
+                               
                         </div>
                     </div>
 
@@ -2238,7 +2244,67 @@
         <script src="../js/navigation.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/gallery.js"></script>
+        <div id="noticesPopup" class="notices-popup-overlay">
+            <div class="notices-popup-container">
+                <!-- Header -->
+                <div class="notices-popup-header">
+                    <div class="notices-popup-icon">📄</div>
+                    <h2 class="notices-popup-title">Documents de l'Après Sheva</h2>
+                    
+                    <button class="notices-close-btn" onclick="closeNoticesPopup()">&times;</button>
+                </div>
 
+                <!-- Contenu -->
+                <div class="notices-popup-content">
+                    <!-- Introduction -->
+                    <div class="notices-intro">
+                        <p>
+                            Retrouvez ici tous les <strong>documents de l'Après Sheva</strong>. 
+                            N'hésitez pas à les consulter avant votre adhésion. Nous restons à votre disposition pour tout besoin d'information.
+                        </p>
+                        
+                    </div>
+
+                    <!-- Liste des notices -->
+                    <div class="notices-list">
+                        <!-- Notice principale -->
+                        <div class="notice-item notice-main">
+                            <div class="notice-icon">📑</div>
+                            <div class="notice-info">
+                                <h4>PV des Assemblées Générales</h4>
+                                <p>Retrouvez ici les procès-verbaux des assemblées générales de l'association Après SHEVA.</p>
+                            </div>
+                            <a href="../PDF_docs/PV AS AG 24-01-26.pdf" target="_blank" class="notice-download-btn">
+                                <span class="download-icon">⬇️</span>
+                                PV AG 2026
+                            </a>
+                        </div>
+
+                        <!-- Règlement intérieur 
+                        <div class="notice-item">
+                            <div class="notice-icon">📜</div>
+                            <div class="notice-info">
+                                <h4>Notice de réinscription annuelle</h4>
+                                <p>Pour vous réinscrire pour une nouvelle saison, suivez toutes les indications de la notice.</p>
+                            </div>
+                            <a href="../PDF_docs/Notice Reinscription Annuelle.pdf" target="_blank" class="notice-download-btn">
+                                <span class="download-icon">⬇️</span>
+                                Télécharger
+                            </a>
+                        </div>
+                        -->
+                    </div>
+
+                    <!-- Footer avec infos complémentaires -->
+                    <div class="notices-footer">
+                        <div class="notices-help">
+                            <span class="help-icon">❓</span>
+                            <p>Une question sur l'association ? Contactez-nous à <a href="mailto:apres.sheva@gmail.com">apres.sheva@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Quick Nav Sticky Script -->
     </body>
 </html>

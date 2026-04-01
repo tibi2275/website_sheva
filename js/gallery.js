@@ -88,27 +88,67 @@ class PhotoGallery {
         }
     }
 
-    // Faire défiler vers l'item suivant
+    // Faire défiler vers l'item suivant (boucle sans à-coup)
     slideNext() {
-        const totalPhotos = this.photoList.length;
-        this.currentIndex = (this.currentIndex + 1) % totalPhotos;
+        const N = this.photoList.length;
+        const track = this.container.querySelector(".gallery-track");
+        const nextIndex = this.currentIndex + 1;
+
+        if (nextIndex >= this.photos.length) {
+            // On dépasse la fin du tableau doublé :
+            // saut silencieux vers la même photo dans la 1ère moitié,
+            // puis animation normale vers la photo suivante
+            const equivalentIndex = this.currentIndex - N;
+            if (track) track.style.transition = "none";
+            this.currentIndex = equivalentIndex;
+            this.updateGalleryPosition();
+            if (track) {
+                track.getBoundingClientRect(); // force le reflow
+                track.style.transition = ""; // restaure la transition CSS
+            }
+            this.currentIndex = equivalentIndex + 1;
+        } else {
+            this.currentIndex = nextIndex;
+        }
         this.updateGalleryPosition();
     }
 
-    // Faire défiler vers l'item précédent
+    // Faire défiler vers l'item précédent (boucle sans à-coup)
     slidePrev() {
-        const totalPhotos = this.photoList.length;
-        this.currentIndex = (this.currentIndex - 1 + totalPhotos) % totalPhotos;
+        const N = this.photoList.length;
+        const track = this.container.querySelector(".gallery-track");
+        const prevIndex = this.currentIndex - 1;
+
+        if (prevIndex < 0) {
+            // On passe avant l'index 0 :
+            // saut silencieux vers la même photo dans la 2ème moitié,
+            // puis animation normale vers la photo précédente
+            const equivalentIndex = this.currentIndex + N;
+            if (track) track.style.transition = "none";
+            this.currentIndex = equivalentIndex;
+            this.updateGalleryPosition();
+            if (track) {
+                track.getBoundingClientRect(); // force le reflow
+                track.style.transition = ""; // restaure la transition CSS
+            }
+            this.currentIndex = equivalentIndex - 1;
+        } else {
+            this.currentIndex = prevIndex;
+        }
         this.updateGalleryPosition();
     }
 
-    // Mettre à jour la position de la galerie
     // Mettre à jour la position de la galerie
     updateGalleryPosition() {
         const track = this.container.querySelector(".gallery-track");
         if (track) {
-            const translateX =
-                this.centerOffset - this.currentIndex * this.itemWidth;
+            // Recalcul dynamique pour éviter tout décalage dû à un reflow ou
+            // un changement de largeur (scrollbar, resize) après l'init
+            const containerWidth = this.container.offsetWidth;
+            const centerOffset = containerWidth / 2 - this.itemWidth / 2;
+            const translateX = Math.round(
+                centerOffset - this.currentIndex * this.itemWidth
+            );
             track.style.transform = `translateX(${translateX}px)`;
         }
     }
